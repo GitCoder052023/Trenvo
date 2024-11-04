@@ -39,6 +39,7 @@
     background: linear-gradient(45deg, #0056ff, #6f7178, #0d0d2b);
     background-size: 200% 200%;
     -webkit-background-clip: text;
+     background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: gradientMove 8s ease infinite;
 }
@@ -121,4 +122,107 @@ html {
     background: #004ae6;
     transform: translateY(-2px);
     transition: all 0.3s ease;
+}
+@media only screen and (max-width: 600px) {
+    .content{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    .bg-\[url\(\'\/static\/Assets\/img\/hero4\.png\'\)\]{
+      width: 100%;
+      margin: 10px auto 20px;
+      
+    }
+    .slide-in-left{
+        margin-right: -40px;
+        width: 100%;
+        
+    }
+    .scroll-top{
+        position: -webkit-sticky;
+    }
+    .flex2{
+        display: flex;
+        flex-direction: column;
+    }
+    .grid{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .text-left{
+        display: flex;
+        flex-direction: column;
+        float: none;
+        width: 100%;
+    }
+    .justify-center1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .section1{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .flex3{
+        display: flex;
+        flex-direction: column;
+    }
+    .display-none{
+        display: none;
+    }
+    .block{
+        display: block;
+    }
+  }
+  @media (min-width: 600px) {
+    .content{
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    .display-none{
+        display: none;
+    }
+  }
+  @media only screen and (min-width: 768px) {
+    .content{
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    .display-none{
+        display: inline-flex;
+}
+}
+@media only screen and (min-width: 992px) {
+    .content{
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    .display-none{
+        display: inline-flex;
+}
+     br{
+        display: none;
+     }
+}
+@media only screen and (min-width: 1200px) {
+    .content{
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    .display-none{
+        display: inline-flex;
+    }
+    br{
+        display: none;
+    }
 }
