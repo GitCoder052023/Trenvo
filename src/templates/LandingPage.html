@@ -10,7 +10,7 @@
     <link rel="icon" href="/static/Assets/img/Wardrobe_Logo.png" type="image/png">
 </head>
 
-<body class="font-['Arial',sans-serif] bg-white m-0 p-0 box-border">
+<body class="font-['Arial',sans-serif] bg-white m-0 p-0 box-border content">
 
     <!-- Scroll to Top -->
     <div class="scroll-top">↑</div>
@@ -19,13 +19,18 @@
         <div class="flex items-center">
             <a href="/" class="text-xl text-[#0d0d2b] no-underline">The Wardrobe</a>
         </div>
-    
-        <ul class="flex gap-8 list-none">
+        <div class="hidden sm:!flex items-center space-x-4 sm:ml-1 md:ml-0">
+        <ul class="flex gap-8 list-none display-none">
             <li><a href="/Shop" class="text-black hover:underline hover:font-medium text-base">Shop</a></li>
             <li><a href="/info/About" class="text-black hover:underline hover:font-medium text-base">About</a></li>
             <li><a href="/info/Contact" class="text-black hover:underline hover:font-medium text-base">Contact</a></li>
             <li><a href="/cart" class="text-black hover:underline hover:font-medium text-base">Cart</a></li>
         </ul>
+        </div>
+        <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="mr-4 sm:hidden text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button"><svg class="w-2 h-2 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+            </svg>
+            </button>
     
         <div class="flex gap-2">
             <button id="loginBtn"
@@ -38,9 +43,9 @@
     
 
     <main>
-        <section class="flex justify-between items-center py-12 px-12 bg-white mt-12">
+        <section class="flex justify-between items-center py-12 px-12 bg-white mt-12 section1">
             <div class="w-1/2 space-y-6 slide-in-left">
-                <h1 class="text-4xl text-[#0d0d2b] typing-text gradient-text">Where Style meets Comfort</h1>
+                <h1 class="text-4xl text-[#0d0d2b] typing-text gradient-text">Where Style meets <br>Comfort</h1>
                 <p class="text-lg text-[#6f7178]">Discover the perfect blend of fashion and comfort with our curated
                     collection of clothing, shoes, and watches.</p>
                 <div class="flex space-x-4">
@@ -56,7 +61,7 @@
             </div>
         </section>
 
-        <section class="text-center py-16 bg-[#f0f7ff]">
+        <section class="text-center py-16 bg-[#f0f7ff] margin-bottom">
             <div class="fade-in">
                 <h5 class="text-sm uppercase tracking-wide text-[#6f7178] mb-1">Featured Categories</h5>
                 <h1 class="text-5xl text-[#0d0d2b] mb-4">Explore Our Collections</h1>
@@ -64,7 +69,7 @@
                     cater to every style and occasion.</p>
             </div>
 
-            <div class="flex justify-center gap-10">
+            <div class="flex justify-center gap-10 justify-center1 flex1">
                 <div class="w-[280px] h-[330px] bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg hover:-translate-y-2 transition-all duration-300 cursor-pointer">
                     <div id="Women" class="h-[220px] bg-[url('/static/Assets/img/blog/b2.jpg')] bg-cover bg-center">
                     </div>
@@ -92,9 +97,9 @@
             </div>
         </section>
 
-        <section class="flex justify-between items-start px-10 py-16 border-b border-[#e6ecf3]">
+        <section class="flex justify-between items-start px-10 py-16 border-b border-[#e6ecf3] flex2">
             <div class="max-w-sm mt-[24vh] slide-in-left">
-                <h2 class="text-3xl text-[#0d0d2b] mb-4">Featured Products</h2>
+                <h2 class="text-3xl text-[#0d0d2b] mb-4 padding-top">Featured Products</h2>
                 <p class="text-lg text-[#6f7178] leading-7">Discover our latest and most popular products, carefully
                     curated to meet your style and comfort needs.</p>
             </div>
@@ -130,7 +135,7 @@
                 id="ShopBtn-Secendory">Shop Now</button>
         </section>
 
-        <footer class="flex justify-around py-10 px-10 bg-[#f0f5f9] text-[#0d0d2b] fade-in">
+        <footer class="flex justify-around py-10 px-10 bg-[#f0f5f9] text-[#0d0d2b] fade-in flex3">
             <div class="flex flex-col">
                 <h3 class="text-lg font-semibold mb-4">The Wardrobe</h3>
                 <ul class="list-none p-0">
