@@ -114,6 +114,7 @@ html {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+
 .scroll-top.visible {
     opacity: 1;
 }
@@ -123,40 +124,88 @@ html {
     transform: translateY(-2px);
     transition: all 0.3s ease;
 }
-@media only screen and (max-width: 600px) {
+.content{
+    width: 100%;
+}
+
+@media only screen and (max-width: 640px) {
     .content{
+        width: 100%;
         margin: 0;
         padding: 0;
-        width: 100%;
+        box-sizing: border-box; 
     }
     .bg-\[url\(\'\/static\/Assets\/img\/hero4\.png\'\)\]{
-      width: 100%;
-      margin: 10px auto 20px;
-      
+      width: 290px;
+      height: 180px;
+      background-size: cover;
+      padding: 0;
+      margin: 0;
+      float: none;
+    }
+    #shopBtn{
+        height: 35px;
+        font-size: 10px;
+        line-height: 9px;
+        font-weight: bold;
+    }
+    #ExpBtn{
+        height: 35px;
+        font-size: 10px;
+        line-height: 9px;
+        font-weight: bold;
+    }
+
+    .typing-text{
+        font-size: 30px;
     }
     .slide-in-left{
         margin-right: -40px;
         width: 100%;
-        
     }
     .scroll-top{
-        position: -webkit-sticky;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #0056ff;
+        color: white;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        opacity: 0;
+        transition: opacity 0.3s ease-out;
+        z-index: 1000;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     }
     .flex2{
-        display: flex;
-        flex-direction: column;
+        display: block;
     }
-    .grid{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
+    .div1 h2{
+        font-size: 20px;
+        margin-left: 3px;
     }
-    .text-left{
-        display: flex;
-        flex-direction: column;
-        float: none;
-        width: 100%;
+    .section3{
+      justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 320px;
+
     }
+    .grid1{
+      max-width: 250px;
+      display: flex;
+      flex-direction: column; 
+      width: 100%; 
+    }
+     .bg1,.bg2{
+        display: block;
+     }
+    
+    
     .justify-center1{
         display: flex;
         flex-direction: column;
@@ -164,29 +213,140 @@ html {
         justify-content: center;
         width: 100%;
     }
+    .div1 p{
+        font-size: 15px;
+        margin-left: 5px;
+        margin-right: -70px;
+        margin-top: -20px;
+        margin-bottom: 10px;
+    }
+    .div1{
+        max-width: 200px;
+    }
+    .section4 p{
+        font-size: 15px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .typing-text{
+        margin-left: -16px;
+        padding-top: 10px;
+        margin-bottom: -30px;
+        padding-bottom: -30px;
+    }
+    @keyframes typing {
+        0% {
+            width: 0
+        }
     
+        40%,
+        60% {
+            width: 17ch
+        }
+    
+        100% {
+            width: 0
+        }
+    }
+    .text-lg{
+        margin-left: -16px;
+        margin-top: 40px;
+        padding-top: -30px;
+    }
     .section1{
-        display: flex;
-        flex-direction: column-reverse;
+      display: flex;
+      flex-direction: column-reverse;
+      position: relative;
+      z-index: -1; 
+      margin-top: -30px;
+    }
+    .section1-1{
+        margin-left: -49px;
     }
     .flex3{
         display: flex;
         flex-direction: column;
+        justify-content: flex-end;
+    }
+    .flex3 ul{
+        text-align: left;
+        margin-left: -13px;
     }
     .display-none{
         display: none;
     }
-    .block{
-        display: block;
+    .button{ 
+       align-items: center;
+       justify-content: center;
+       margin-right: -35px;
     }
+    #SignupBtn,#loginBtn{
+        height: 35px; 
+    }
+    #SignupBtn{
+        padding: 5px 15px 5px 15px;
+        line-height: 14px;
+        width: 70px;
+    }
+    .nav1{
+        display: flex;
+        padding-right: -30px;
+    }
+    .logo{
+        margin-left: -38px;
+        font-size: 18px;
+    }
+    #dropdownDefaultButton{
+        margin-right: -10px;
+    }
+    .dropbtn {
+        background-color: #0056ff;
+        color: white;
+        padding: 15px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+      }
+      
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 90px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        border-radius: 5px;
+      }
+      
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      
+      .dropdown-content a:hover {background-color: #f1f1f1}
+      
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+      
   }
-  @media (min-width: 600px) {
+  @media (min-width: 640px) {
     .content{
       width: 100%;
       margin: 0;
       padding: 0;
     }
     .display-none{
+        display: none;
+    }
+    .dropdown-content{
         display: none;
     }
   }
@@ -199,6 +359,9 @@ html {
     .display-none{
         display: inline-flex;
 }
+.dropdown-content{
+    display: none;
+}
 }
 @media only screen and (min-width: 992px) {
     .content{
@@ -208,6 +371,9 @@ html {
     }
     .display-none{
         display: inline-flex;
+}
+.dropdown-content{
+    display: none;
 }
      br{
         display: none;
@@ -223,6 +389,9 @@ html {
         display: inline-flex;
     }
     br{
+        display: none;
+    }
+    .dropdown-content{
         display: none;
     }
 }

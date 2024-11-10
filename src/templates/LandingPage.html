@@ -15,9 +15,9 @@
     <!-- Scroll to Top -->
     <div class="scroll-top">↑</div>
 
-    <nav class="flex justify-between items-center px-12 py-4 bg-white z-50 fade-in">
+    <nav class="flex justify-between items-center px-12 py-4 bg-white z-50 fade-in nav1">
         <div class="flex items-center">
-            <a href="/" class="text-xl text-[#0d0d2b] no-underline">The Wardrobe</a>
+            <a href="/" class="text-xl text-[#0d0d2b] no-underline logo">The <br>Wardrobe</a>
         </div>
         <div class="hidden sm:!flex items-center space-x-4 sm:ml-1 md:ml-0">
         <ul class="flex gap-8 list-none display-none">
@@ -27,24 +27,30 @@
             <li><a href="/cart" class="text-black hover:underline hover:font-medium text-base">Cart</a></li>
         </ul>
         </div>
-        <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="mr-4 sm:hidden text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button"><svg class="w-2 h-2 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+        <div class="dropdown">
+        <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="mr-4 sm:hidden text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 dropbtn" type="button"><svg class="w-2 h-2 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
             </svg>
             </button>
-    
-        <div class="flex gap-2">
+            <div class="dropdown-content">
+                <a href="/Shop">Shop</a>
+                <a href="/info/About">About</a>
+                <a href="/info/Contact">Contact</a>
+                <a href="/cart">Cart</a>
+                </div>
+        </div>
+        <div class="flex gap-2 button">
             <button id="loginBtn"
                 class="px-4 py-2 border border-[#e1e1e1] rounded text-sm text-black hover:bg-[#e2eaf4] transition-colors duration-300">Login</button>
             <button id="SignupBtn"
-                class="px-4 py-2 bg-[#0056ff] text-white rounded text-sm hover:bg-[#004ae6] transition-colors duration-300">Sign
-                Up</button>
+                class="px-4 py-2 bg-[#0056ff] text-white rounded text-sm hover:bg-[#004ae6] transition-colors duration-300">Sign Up</button>
         </div>
     </nav>
     
 
     <main>
         <section class="flex justify-between items-center py-12 px-12 bg-white mt-12 section1">
-            <div class="w-1/2 space-y-6 slide-in-left">
+            <div class="w-1/2 space-y-6 slide-in-left section1-1">
                 <h1 class="text-4xl text-[#0d0d2b] typing-text gradient-text">Where Style meets <br>Comfort</h1>
                 <p class="text-lg text-[#6f7178]">Discover the perfect blend of fashion and comfort with our curated
                     collection of clothing, shoes, and watches.</p>
@@ -61,12 +67,12 @@
             </div>
         </section>
 
-        <section class="text-center py-16 bg-[#f0f7ff] margin-bottom">
+        <section class="text-center py-16 bg-[#f0f7ff] margin-bottom section2">
             <div class="fade-in">
                 <h5 class="text-sm uppercase tracking-wide text-[#6f7178] mb-1">Featured Categories</h5>
                 <h1 class="text-5xl text-[#0d0d2b] mb-4">Explore Our Collections</h1>
                 <p class="text-lg text-[#6f7178] mb-10 max-w-2xl mx-auto">From casual wear to formal attire, our collections
-                    cater to every style and occasion.</p>
+                    <br>cater to every style and occasion.</p>
             </div>
 
             <div class="flex justify-center gap-10 justify-center1 flex1">
@@ -97,15 +103,15 @@
             </div>
         </section>
 
-        <section class="flex justify-between items-start px-10 py-16 border-b border-[#e6ecf3] flex2">
-            <div class="max-w-sm mt-[24vh] slide-in-left">
+      <section class="flex justify-between items-start px-10 py-16 border-b border-[#e6ecf3] section3">
+            <div class="max-w-sm mt-[24vh] slide-in-left div1">
                 <h2 class="text-3xl text-[#0d0d2b] mb-4 padding-top">Featured Products</h2>
                 <p class="text-lg text-[#6f7178] leading-7">Discover our latest and most popular products, carefully
                     curated to meet your style and comfort needs.</p>
             </div>
 
-            <div class="grid grid-cols-2 gap-5 w-[600px] slide-in-right">
-                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg hover:-translate-y-2 transition-all duration-300 cursor-pointer">
+              <div class="grid grid-cols-2 gap-5 w-[600px] slide-in-right grid1">
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg hover:-translate-y-2 transition-all duration-300 cursor-pointer bg1">
                     <div id="Shirt" class="h-[180px] bg-[url('/static/Assets/img/blog/b10.jpeg')] bg-cover bg-center">
                     </div>
                     <div class="p-5 text-left">
@@ -114,7 +120,7 @@
                         <p class="text-xl text-[#0d0d2b]">$49.99</p>
                     </div>
                 </div>
-                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg hover:-translate-y-2 transition-all duration-300 cursor-pointer">
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg hover:-translate-y-2 transition-all duration-300 cursor-pointer bg2">
                     <div id="Shoes" class="h-[180px] bg-[url('/static/Assets/img/blog/b11.jpeg')] bg-cover bg-center">
                     </div>
                     <div class="p-5 text-left">
@@ -124,18 +130,18 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section>  
 
-        <section class="text-center py-20 bg-white fade-in">
+        <section class="text-center py-20 bg-white fade-in section4">
             <h2 class="text-4xl text-[#0d0d2b] mb-5">Affordable Home Delivery</h2>
-            <p class="text-lg text-[#6f7178] leading-8 max-w-2xl mx-auto mb-8">Enjoy a seamless shopping experience with
+            <p class="text-lg text-[#6f7178] leading-8 max-w-2xl mx-auto mb-8 mag">Enjoy a seamless shopping experience with
                 our fast and affordable home delivery service, ensuring your style essentials arrive at your doorstep in
                 no time.</p>
             <button class="bg-[#316bf5] text-white border-none px-8 py-3 text-base font-semibold rounded-lg cursor-pointer hover:bg-[#274dc9] transition-colors duration-300"
                 id="ShopBtn-Secendory">Shop Now</button>
         </section>
 
-        <footer class="flex justify-around py-10 px-10 bg-[#f0f5f9] text-[#0d0d2b] fade-in flex3">
+       <footer class="flex justify-around py-10 px-10 bg-[#f0f5f9] text-[#0d0d2b] fade-in flex3">
             <div class="flex flex-col">
                 <h3 class="text-lg font-semibold mb-4">The Wardrobe</h3>
                 <ul class="list-none p-0">
