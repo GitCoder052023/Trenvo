@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/static/CSS/output.css">
     <link rel="stylesheet" href="/static/CSS/LandingPage.css">
     <link rel="icon" href="/static/Assets/img/Wardrobe_Logo.png" type="image/png">
+
 </head>
 
 <body class="font-['Arial',sans-serif] bg-white m-0 p-0 box-border">
@@ -17,17 +18,17 @@
 
     <nav class="flex justify-between items-center px-12 py-4 bg-white z-50 fade-in">
         <div class="flex items-center">
-            <a href="/" class="text-xl text-[#0d0d2b] no-underline">The Wardrobe</a>
+            <a href="/" class="text-xl text-[#0d0d2b] no-underline logo">The Wardrobe</a>
         </div>
     
-        <ul class="flex gap-8 list-none">
+        <ul class="flex gap-8 list-none navbar">
             <li><a href="/Shop" class="text-black hover:underline hover:font-medium text-base">Shop</a></li>
             <li><a href="/info/About" class="text-black hover:underline hover:font-medium text-base">About</a></li>
             <li><a href="/info/Contact" class="text-black hover:underline hover:font-medium text-base">Contact</a></li>
             <li><a href="/cart" class="text-black hover:underline hover:font-medium text-base">Cart</a></li>
         </ul>
     
-        <div class="flex gap-2">
+        <div class="flex gap-2 nav-buttons">
             <button id="loginBtn"
                 class="px-4 py-2 border border-[#e1e1e1] rounded text-sm text-black hover:bg-[#e2eaf4] transition-colors duration-300">Login</button>
             <button id="SignupBtn"
@@ -37,13 +38,13 @@
     </nav>
     
 
-    <main>
-        <section class="flex justify-between items-center py-12 px-12 bg-white mt-12">
-            <div class="w-1/2 space-y-6 slide-in-left">
-                <h1 class="text-4xl text-[#0d0d2b] typing-text gradient-text">Where Style meets Comfort</h1>
+    <main style="overflow:hidden">
+        <section class="flex justify-between items-center py-12 px-12 bg-white mt-12 hero">
+            <div class="w-1/2 space-y-6 slide-in-left hero-content">
+                <h1 class="text-4xl text-[#0d0d2b] typing-text gradient-text typewriter"></h1>
                 <p class="text-lg text-[#6f7178]">Discover the perfect blend of fashion and comfort with our curated
                     collection of clothing, shoes, and watches.</p>
-                <div class="flex space-x-4">
+                <div class="flex space-x-4 pc-hero-btn">
                     <button id="shopBtn"
                         class="inline-block bg-[#0056ff] text-white px-6 py-3 rounded hover:bg-[#004ae6] transition-colors duration-300">Shop
                         Now</button>
@@ -52,20 +53,28 @@
                         Collections</button>
                 </div>
             </div>
-            <div class="w-2/5 h-[300px] slide-in-right bg-[#f9f1f1] rounded-lg bg-[url('/static/Assets/img/hero4.png')] bg-no-repeat bg-cover bg-right">
+            <div class="w-2/5 h-[300px] slide-in-right bg-[#f9f1f1] rounded-lg bg-[url('/static/Assets/img/hero4.png')] bg-no-repeat bg-cover bg-right hero-image">
             </div>
+            <div class="flex space-x-4 mobile-hero-btn">
+               <button id="shopBtn"
+                   class="inline-block bg-[#0056ff] text-white px-6 py-3 rounded hover:bg-[#004ae6] transition-colors duration-300">Shop
+                   Now</button>
+               <button id="ExpBtn"
+                   class="inline-block border border-[#e1e1e1] text-black px-6 py-3 rounded hover:bg-[#e2eaf4] transition-colors duration-300">Explore
+                   Collections</button>
+           </div>
         </section>
 
         <section class="text-center py-16 bg-[#f0f7ff]">
             <div class="fade-in">
                 <h5 class="text-sm uppercase tracking-wide text-[#6f7178] mb-1">Featured Categories</h5>
-                <h1 class="text-5xl text-[#0d0d2b] mb-4">Explore Our Collections</h1>
+                <h1 class="text-5xl text-[#0d0d2b] mb-4 heading">Explore Our Collections</h1>
                 <p class="text-lg text-[#6f7178] mb-10 max-w-2xl mx-auto">From casual wear to formal attire, our collections
                     cater to every style and occasion.</p>
             </div>
 
-            <div class="flex justify-center gap-10">
-                <div class="w-[280px] h-[330px] bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg hover:-translate-y-2 transition-all duration-300 cursor-pointer">
+            <div class="flex justify-center gap-10 collection-box-all">
+                <div class="w-[280px] h-[330px] bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg hover:-translate-y-2 transition-all duration-300 cursor-pointer collection-box">
                     <div id="Women" class="h-[220px] bg-[url('/static/Assets/img/blog/b2.jpg')] bg-cover bg-center">
                     </div>
                     <div class="p-6 text-left">
@@ -73,7 +82,7 @@
                         <p class="text-base text-[#6f7178]">Elegant and stylish options</p>
                     </div>
                 </div>
-                <div class="w-[280px] h-[330px] bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg hover:-translate-y-2 transition-all duration-300 cursor-pointer">
+                <div class="w-[280px] h-[330px] bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg hover:-translate-y-2 transition-all duration-300 cursor-pointer collection-box">
                     <div id="Men" class="h-[220px] bg-[url('/static/Assets/img/blog/b8.jpeg')] bg-cover bg-center">
                     </div>
                     <div class="p-6 text-left">
@@ -81,7 +90,7 @@
                         <p class="text-base text-[#6f7178]">Classic and modern designs</p>
                     </div>
                 </div>
-                <div class="w-[280px] h-[330px] bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg hover:-translate-y-2 transition-all duration-300 cursor-pointer">
+                <div class="w-[280px] h-[330px] bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg hover:-translate-y-2 transition-all duration-300 cursor-pointer collection-box">
                     <div id="Accessories" class="h-[220px] bg-[url('/static/Assets/img/blog/b9.jpg')] bg-cover bg-center">
                     </div>
                     <div class="p-6 text-left">
@@ -92,15 +101,15 @@
             </div>
         </section>
 
-        <section class="flex justify-between items-start px-10 py-16 border-b border-[#e6ecf3]">
-            <div class="max-w-sm mt-[24vh] slide-in-left">
+        <section class="flex justify-between items-start px-10 py-16 border-b border-[#e6ecf3] Featured-box-all">
+            <div class="max-w-sm mt-[24vh] slide-in-left before-feature">
                 <h2 class="text-3xl text-[#0d0d2b] mb-4">Featured Products</h2>
                 <p class="text-lg text-[#6f7178] leading-7">Discover our latest and most popular products, carefully
                     curated to meet your style and comfort needs.</p>
             </div>
 
-            <div class="grid grid-cols-2 gap-5 w-[600px] slide-in-right">
-                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg hover:-translate-y-2 transition-all duration-300 cursor-pointer">
+            <div class="grid grid-cols-2 gap-5 w-[600px] slide-in-right special-box-all">
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg hover:-translate-y-2 transition-all duration-300 cursor-pointer special-box">
                     <div id="Shirt" class="h-[180px] bg-[url('/static/Assets/img/blog/b10.jpeg')] bg-cover bg-center">
                     </div>
                     <div class="p-5 text-left">
@@ -109,7 +118,7 @@
                         <p class="text-xl text-[#0d0d2b]">$49.99</p>
                     </div>
                 </div>
-                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg hover:-translate-y-2 transition-all duration-300 cursor-pointer">
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg hover:-translate-y-2 transition-all duration-300 cursor-pointer special-box">
                     <div id="Shoes" class="h-[180px] bg-[url('/static/Assets/img/blog/b11.jpeg')] bg-cover bg-center">
                     </div>
                     <div class="p-5 text-left">
@@ -122,16 +131,16 @@
         </section>
 
         <section class="text-center py-20 bg-white fade-in">
-            <h2 class="text-4xl text-[#0d0d2b] mb-5">Affordable Home Delivery</h2>
-            <p class="text-lg text-[#6f7178] leading-8 max-w-2xl mx-auto mb-8">Enjoy a seamless shopping experience with
+            <h2 class="text-4xl text-[#0d0d2b] mb-5 b-footer-h">Affordable Home Delivery</h2>
+            <p class="text-lg text-[#6f7178] leading-8 max-w-2xl mx-auto mb-8 b-footer-p">Enjoy a seamless shopping experience with
                 our fast and affordable home delivery service, ensuring your style essentials arrive at your doorstep in
                 no time.</p>
             <button class="bg-[#316bf5] text-white border-none px-8 py-3 text-base font-semibold rounded-lg cursor-pointer hover:bg-[#274dc9] transition-colors duration-300"
                 id="ShopBtn-Secendory">Shop Now</button>
         </section>
 
-        <footer class="flex justify-around py-10 px-10 bg-[#f0f5f9] text-[#0d0d2b] fade-in">
-            <div class="flex flex-col">
+        <footer class="flex justify-around py-10 px-10 bg-[#f0f5f9] text-[#0d0d2b] fade-in footer-box-all">
+            <div class="flex flex-col footer-box">
                 <h3 class="text-lg font-semibold mb-4">The Wardrobe</h3>
                 <ul class="list-none p-0">
                     <li class="mb-2"><a href="#" class="text-[#6f7178] hover:text-[#316bf5] no-underline">About Us</a></li>
@@ -140,7 +149,7 @@
                     <li class="mb-2"><a href="#" class="text-[#6f7178] hover:text-[#316bf5] no-underline">News</a></li>
                 </ul>
             </div>
-            <div class="flex flex-col">
+            <div class="flex flex-col footer-box">
                 <h3 class="text-lg font-semibold mb-4">Shop</h3>
                 <ul class="list-none p-0">
                     <li class="mb-2"><a href="#" class="text-[#6f7178] hover:text-[#316bf5] no-underline">Women</a></li>
@@ -149,7 +158,7 @@
                     <li class="mb-2"><a href="#" class="text-[#6f7178] hover:text-[#316bf5] no-underline">Sale</a></li>
                 </ul>
             </div>
-            <div class="flex flex-col">
+            <div class="flex flex-col footer-box">
                 <h3 class="text-lg font-semibold mb-4">Customer Service</h3>
                 <ul class="list-none p-0">
                     <li class="mb-2"><a href="#" class="text-[#6f7178] hover:text-[#316bf5] no-underline">Contact Us</a></li>
@@ -158,7 +167,7 @@
                     <li class="mb-2"><a href="#" class="text-[#6f7178] hover:text-[#316bf5] no-underline">Shipping</a></li>
                 </ul>
             </div>
-            <div class="flex flex-col">
+            <div class="flex flex-col footer-box">
                 <h3 class="text-lg font-semibold mb-4">Legal</h3>
                 <ul class="list-none p-0">
                     <li class="mb-2"><a href="#" class="text-[#6f7178] hover:text-[#316bf5] no-underline">Privacy Policy</a></li>
@@ -166,7 +175,7 @@
                     <li class="mb-2"><a href="#" class="text-[#6f7178] hover:text-[#316bf5] no-underline">Cookie Policy</a></li>
                 </ul>
             </div>
-            <div class="flex flex-col">
+            <div class="flex flex-col footer-box">
                 <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
                 <ul class="list-none p-0">
                     <li class="mb-2"><a href="#" class="text-[#6f7178] hover:text-[#316bf5] no-underline">Instagram</a></li>
@@ -177,5 +186,26 @@
             </div>
         </footer>
         <script src="/static/JS/LandingPage.js"></script>
+        <!-- Typed Js -->
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+     var options = {
+          strings: ["Where Style meets Comfort"],
+          stringsElement: null,
+          typeSpeed: 100, // Speed of typing
+          backSpeed: 50,  // Speed of backspacing
+          startDelay: 500, // Delay before typing starts
+          backDelay: 1500, // Delay before backspacing
+          loop:true,
+          showCursor: false, // Show the blinking cursor
+           
+     
+          
+        };
+    
+        var typed = new Typed(".typewriter", options);
+</script>
+
 </body>
 </html>

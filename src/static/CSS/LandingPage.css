@@ -1,49 +1,52 @@
-@keyframes typing {
-    0% {
-        width: 0
-    }
-
-    40%,
-    60% {
-        width: 25ch
-    }
-
-    100% {
-        width: 0
-    }
-}
-
-@keyframes blink {
-    50% {
-        border-color: transparent
-    }
-}
-
-@keyframes gradientMove {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-.gradient-text {
+/* @keyframes typing {
+     0% {
+         width: 0
+     }
+ 
+     40%,
+     60% {
+         width: 25ch
+     }
+ 
+     100% {
+         width: 0
+     }
+ }
+ 
+ @keyframes blink {
+     50% {
+         border-color: transparent
+     }
+ }
+ 
+ @keyframes gradientMove {
+     0% {
+         background-position: 0% 50%;
+     }
+ 
+     50% {
+         background-position: 100% 50%;
+     }
+ 
+     100% {
+         background-position: 0% 50%;
+     }
+ } */
+ 
+ .gradient-text {
     font-family: 'Arial', sans-serif;
+    color: black;
     font-size: 2.25rem;
-    background: linear-gradient(45deg, #0056ff, #6f7178, #0d0d2b);
-    background-size: 200% 200%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: gradientMove 8s ease infinite;
+    /* text-shadow: 1px 1px 4px #0056ff; */
+    min-height: 50px;
+     /* background: linear-gradient(45deg, #0056ff, #6f7178, #0d0d2b);  */
+    /* background-size: 200% 200%;
+    --webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    /* animation: gradientMove 8s ease infinite; */
 }
 
-.typing-text {
+/* .typing-text {
     font-family: 'Arial', sans-serif;
     font-size: 2.25rem;
     color: #0d0d2b;
@@ -56,7 +59,7 @@
     animation:
         typing 10s steps(25, end) infinite,
         blink 0.75s step-end infinite;
-}
+} */
 
 /* Scroll Animations */
 .fade-in {
@@ -122,3 +125,131 @@ html {
     transform: translateY(-2px);
     transition: all 0.3s ease;
 }
+
+  .mobile-hero-btn{
+    display: none !important;
+}
+nav .logo{
+    color: #003366;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+  @media (max-width:830px){
+
+
+    nav{
+        width: 100%;
+        position: fixed;
+        background-color: white;
+        z-index: 9999;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        top: 0;
+        left: 0;
+        box-shadow: .4px .4px 40px rgb(0, 0, 0, 0.2);
+    }
+  
+   
+    .navbar{
+         display: none !important;
+    }
+    .mobile-hero-btn{
+         display: block !important;
+         margin-top: 15px;
+    }.pc-hero-btn{
+         display: none !important;
+    }
+    .hero{
+        flex-wrap: wrap;
+        padding-right: 0 !important;
+    }
+    .hero-content,.hero-image{
+        flex: 0 0 90%;
+        max-width: 90%;
+    }.hero-image{
+        margin-top: 20px;
+    }
+    .collection-box-all{
+        flex-wrap: wrap;
+    }.collection-box{
+        flex: 0 0 45%;
+        max-width: 45%;
+    }
+    .Featured-box-all{
+        flex-direction: column !important;
+        gap: 20px !important;
+    }
+    .footer-box-all{
+        flex-wrap: wrap;
+    }.special-box-all{
+        display: flex !important;
+        flex-wrap: wrap !important;
+        width: 100% !important;
+    }.special-box{
+        flex: 0 0 45%;
+        max-width: 45%;
+    }
+    .footer-box{
+        flex: 0 0 30%;
+        max-width: 30%;
+    }
+}
+@media(max-width:550px){
+    .hero{
+        flex-wrap: wrap-reverse;
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+        padding-top: 0;
+    }
+    .hero-content{
+        margin-top: 10px;
+        padding-left: 20px;
+    }
+    .hero-content,.hero-image{
+        flex: 0 0 90%;
+        max-width: 90%;
+    }.hero-image{
+        /* margin-top: 20px; */
+        flex: 0 0 100%;
+        max-width: 100vw;
+    }
+    .pc-hero-btn{
+        display: block !important;
+    }
+    .mobile-hero-btn{
+        display: none !important;
+    }
+    #shopBtn,#ExpBtn,#ShopBtn-Secendory{
+         font-size: 12px;
+    }
+    .heading{
+        font-size: 2rem !important;
+    }
+    .collection-box{
+        flex: 0 0 90% !important;
+        max-width: 90% !important;
+    }
+    .special-box{
+        flex: 0 0 90%;
+        max-width: 90%;
+    }
+    .before-feature{
+        margin-top: 0;
+    }
+    .b-footer-h{
+        font-size: 1.8rem !important;
+    }.b-footer-p{
+        width: 85% !important;
+    }
+    .footer-box{
+        flex: 0 0 90%;
+        max-width: 90%;
+    }
+
+  }
+  @media(max-width:990px){
+    .typing-text{
+        font-size: 2.5rem !important;
+        min-height: 100px;
+    }
+  }

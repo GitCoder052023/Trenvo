@@ -184,9 +184,8 @@ nav .search-bar input{
   /* height: 450px; */
 }
 
-.hero-img {
-  margin-top: 10rem;
-  margin-bottom: 3rem;
+.hero .hero-img{
+  margin-top: 5rem;
 }
 @media(max-width:870px){
   .hero .hero-img{
@@ -378,6 +377,9 @@ nav .search-bar input{
 @media(max-width:550px){
   .flex input{
     max-width: 400px;
+  }
+  .hero .hero-img{
+    height: 250px;
   }
 }
 @media(max-width:420px){
