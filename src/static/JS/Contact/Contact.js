@@ -24,6 +24,11 @@ document.getElementById('SubmitBtn').addEventListener('click', function(e) {
 
     // Send form data to the server
     try {
+        document.getElementById("body").innerHTML = `
+        <div class="absolute right-1/2 bottom-1/2  transform translate-x-1/2 translate-y-1/2 ">
+    <div class="border-t-transparent border-solid animate-spin  rounded-full border-blue-400 border-8 h-64 w-64"></div>
+</div>
+<script src="/static/JS/Contact/Contact.js"></script>`
         fetch('http://localhost:8000/Contact/email/acknowledgment', {
             method: 'POST',
             headers: {
@@ -52,7 +57,6 @@ document.getElementById('SubmitBtn').addEventListener('click', function(e) {
                 .then(response => response.json())
                 .then(data => {
                     if (data.message === "Email Sent Successfully") {
-                        alert('Email sent successfully');
                     } else {
                         alert('Failed to send email');
                     }
@@ -60,7 +64,7 @@ document.getElementById('SubmitBtn').addEventListener('click', function(e) {
                 .catch(error => {
                     console.error('Error sending email:', error);
                 });
-                alert('Email sent successfully');
+                window.location.href = '/info/Contact/Success';
             } else {
                 alert('Failed to send email');
             }
