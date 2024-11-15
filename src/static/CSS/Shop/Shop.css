@@ -378,8 +378,9 @@ nav .search-bar input{
   .flex input{
     max-width: 400px;
   }
-  .hero .hero-img{
-    height: 250px;
+
+  .hero, .hero-img {
+    margin-top: 0px !important;
   }
 }
 @media(max-width:420px){
