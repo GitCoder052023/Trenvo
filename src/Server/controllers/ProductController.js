@@ -9,4 +9,15 @@ async function getProductsByCategory(req, res) {
         res.status(500).json({ message: 'Internal Server error', error: error.message });
     }
 }
-module.exports = { getProductsByCategory };
+
+async function getProductsByKeywords(req, res) {
+    try {
+        const { keywords } = req.body;
+        const products = await Product.getProductsByKeywords(keywords);
+        res.status(200).json(products);
+    } catch (error) {
+        res.status(500).json({ message: 'Internal Server error', error: error.message });
+    }
+}
+
+module.exports = { getProductsByCategory, getProductsByKeywords };
