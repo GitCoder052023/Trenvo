@@ -27,16 +27,18 @@ async function verifyUserToken(req, res) {
         }
 
         const verification = verifyToken(token);
-        console.log('Verification result:', verification);
 
         if (!verification.valid) {
-            throw new Error(verification.error || 'Invalid token');
+            return res.status(401).json({ message: 'Invalid token' });
         }
-        return verification.decoded;
+        
+        // Send back a success response
+        return res.status(200).json({ valid: true, decoded: verification.decoded });
     } catch (error) {
-        throw error; // Re-throw the error so the calling function can handle it
+        return res.status(401).json({ message: error.message });
     }
 }
+
 
 // Middleware to verifyToken and Authorize a user
 const verifyTokenAndAuthorization = (req, res, next) => {

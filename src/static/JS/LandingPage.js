@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const token = window.localStorage.getItem('jwtToken');
 
     if (token) {
-        fetch("http://192.168.1.5:8000/auth/verify-token", {
+        fetch("http://localhost:8000/auth/verify-token", {
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${token}`,
