@@ -246,11 +246,43 @@ nav .search-bar input{
 }
 .featured-box-all .featured-box .img{
   height: 300px;
-  background-image: url(../../Assets/img/products/f2.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}.featured-box .name{
+}
+
+#FP1 {
+  background-image: url("/static/Assets/img/products/f1.jpg");
+}
+
+#FP2 {
+  background-image: url("/static/Assets/img/products/f2.jpg");
+}
+
+#FP3 {
+  background-image: url("/static/Assets/img/products/f3.jpg");
+}
+
+#FP4 {
+  background-image: url("/static/Assets/img/products/f4.jpg");
+}
+
+#SBC1 {
+  background-image: url("/static/Assets/img/products/f1.jpg");
+}
+
+#SBC2 {
+  background-image: url("/static/Assets/img/products/f2.jpg");
+}
+
+#SBC3 {
+  background-image: url("/static/Assets/img/products/f3.jpg");
+}
+
+#SBC4 {
+  background-image: url("/static/Assets/img/products/f4.jpg");
+}
+.featured-box .name{
   padding: 20px;
   padding-bottom: 10px;
   font-size: 22px;
@@ -279,7 +311,7 @@ nav .search-bar input{
 }
 .Arrival-box .img{
   height: 400px;
-  background-image: url(../../Assets/img/products/f1.jpg);
+  background-image: url("/static/Assets/img/products/f1.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
