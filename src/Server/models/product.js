@@ -1,6 +1,11 @@
 const { connectToDatabase } = require('../config/db');
 
 async function getProductsByCategory(category) {
+    const validCategories = ['Men', 'Women', 'Wearables', 'Accessories'];
+    if (!validCategories.includes(category)) {
+        throw new Error('Invalid category value');
+    }
+
     const db = await connectToDatabase();
     return db.collection('Products')
         .find({ productCategory: category })
@@ -18,4 +23,20 @@ async function getProductsByKeywords(keywords) {
         .toArray();
 }
 
-module.exports = { getProductsByCategory, getProductsByKeywords };
+async function getProductsByFeature(feature) {
+    const validFeatures = ['NA', 'FP', 'SBC'];
+    if (!validFeatures.includes(feature)) {
+        throw new Error('Invalid feature value');
+    }
+    
+    const db = await connectToDatabase();
+    return db.collection('Products')
+        .find({ Feature: feature })
+        .toArray();
+}
+
+module.exports = { 
+    getProductsByCategory, 
+    getProductsByKeywords,
+    getProductsByFeature 
+};
