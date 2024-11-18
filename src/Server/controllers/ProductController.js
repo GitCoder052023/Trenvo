@@ -36,7 +36,7 @@ async function getProductsByFeature(req, res) {
         res.status(200).json(products);
     } catch (error) {
         if (error.message === 'Invalid feature value') {
-            return res.status(400).json({ message: 'Feature must be one of: NA, FP, SBC' });
+            return res.status(400).json({ message: 'Feature must be one of: NA, FP' }); // Updated error message
         }
         res.status(500).json({ message: 'Internal Server error', error: error.message });
     }

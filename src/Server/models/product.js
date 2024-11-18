@@ -24,7 +24,7 @@ async function getProductsByKeywords(keywords) {
 }
 
 async function getProductsByFeature(feature) {
-    const validFeatures = ['NA', 'FP', 'SBC'];
+    const validFeatures = ['NA', 'FP'];  
     if (!validFeatures.includes(feature)) {
         throw new Error('Invalid feature value');
     }
