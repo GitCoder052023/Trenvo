@@ -1,4 +1,4 @@
-const { getUserById, updateUserById } = require('../models/User');
+const { getUserById, updateUserById, deleteUserById } = require('../models/User');
 const ALLOWED_UPDATE_FIELDS = ['name', 'phone', 'locality', 'road', 'house', 'landmark'];
 
 async function getUserProfile(req, res) {
@@ -9,7 +9,6 @@ async function getUserProfile(req, res) {
             return res.status(404).json({ message: 'User not found' });
         }
 
-        // Destructure to get only the fields we want
         const { _id, password, ...userWithoutSensitiveInfo } = user;
         
         res.status(200).json({ user: userWithoutSensitiveInfo });
@@ -21,7 +20,6 @@ async function getUserProfile(req, res) {
 async function updateUserProfile(req, res) {
     const { UserId, updates } = req.body;
     try {
-        // Filter updates to only include allowed fields
         const filteredUpdates = {};
         ALLOWED_UPDATE_FIELDS.forEach(field => {
             if (updates.hasOwnProperty(field)) {
@@ -52,7 +50,34 @@ async function updateUserProfile(req, res) {
     }
 }
 
+async function logoutUser(req, res) {
+    const userId = req.headers.authorization;
+    
+    if (!userId) {
+        return res.status(401).json({ message: 'Authorization header required' });
+    }
+
+    try {
+        const user = await getUserById(userId);
+        
+        if (!user) {
+            return res.status(404).json({ message: 'User not found' });
+        }
+
+        const result = await deleteUserById(userId);
+        
+        if (result.deletedCount === 1) {
+            return res.status(200).json({ message: 'User logged out and deleted successfully' });
+        } else {
+            return res.status(500).json({ message: 'Failed to delete user' });
+        }
+    } catch (error) {
+        res.status(500).json({ message: 'Error during logout', error: error.message });
+    }
+}
+
 module.exports = {
     getUserProfile,
-    updateUserProfile
+    updateUserProfile,
+    logoutUser  
 };

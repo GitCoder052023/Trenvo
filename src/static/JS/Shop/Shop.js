@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const accountLink = document.getElementById('acc');
     const dropdownMenu2 = document.getElementById('dropdown-menu2');
     const dropdownMenu3 = document.getElementById('dropdown-menu3');
+    const logoutLink = document.getElementById('logout');
+    const userId =  window.localStorage.getItem('userId');
     const baseURL = "/shop/Collection/Categories/";
 
     const SBC_Cards = {
@@ -20,6 +22,30 @@ document.addEventListener('DOMContentLoaded', function () {
             element.addEventListener('click', () => {
                 window.location.href = baseURL + id.replace('SBC_', '');
             });
+        }
+    });
+
+    logoutLink.addEventListener('click', async () => {
+        try {
+            const response = await fetch('http://localhost:8000/profile/logout', {
+                method: 'DELETE',
+                headers: {
+                    'Authorization': userId,
+                    'Content-Type': 'application/json'
+                }
+            });
+    
+            const data = await response.json();
+    
+            if (response.ok) {
+                window.localStorage.removeItem('userId');
+                window.localStorage.removeItem('jwtToken');
+                window.location.href = '/';
+            } else {
+                console.log('Logout failed:', data.message);
+            }
+        } catch (error) {
+            console.error('Error during logout:', error);
         }
     });
     

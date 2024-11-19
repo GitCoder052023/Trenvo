@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     async function getUserProfile() {
         const userId = localStorage.getItem('userId');
         if (!userId) {
-            window.location.href = '/login';
+            window.location.href = '/Auth/Login';
             return;
         }
 

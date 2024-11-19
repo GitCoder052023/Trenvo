@@ -5,6 +5,10 @@ SEND.addEventListener("click", () => {
     const emailValue = Email.value.trim();
     
     if (emailValue !== "" && emailValue.includes("@") && emailValue.endsWith(".com")) {
+        document.getElementById("body").innerHTML = `
+    <div class="absolute right-1/2 bottom-1/2  transform translate-x-1/2 translate-y-1/2 ">
+        <div class="border-t-transparent border-solid animate-spin  rounded-full border-blue-400 border-8 h-64 w-64"></div></div>
+        <script src="/static/JS/Auth/Submit-Email.js"></script>`
         fetch("http://localhost:8000/auth/password-reset/request", {
             method: "POST",
             headers: {
