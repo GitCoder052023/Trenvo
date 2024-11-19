@@ -4,6 +4,25 @@ document.addEventListener('DOMContentLoaded', function () {
     const accountLink = document.getElementById('acc');
     const dropdownMenu2 = document.getElementById('dropdown-menu2');
     const dropdownMenu3 = document.getElementById('dropdown-menu3');
+    const baseURL = "/shop/Collection/Categories/";
+
+    const SBC_Cards = {
+        "SBC_Mens": document.getElementById('Mens'),
+        "SBC_Womens": document.getElementById('Womens'),
+        "SBC_Wearables": document.getElementById('Wearables'),
+        "SBC_Accessories": document.getElementById('Accessories'),
+    };
+    
+    
+    Object.entries(SBC_Cards).forEach(([id, element]) => {
+        if (element) {
+            element.style.cursor = 'pointer';
+            element.addEventListener('click', () => {
+                window.location.href = baseURL + id.replace('SBC_', '');
+            });
+        }
+    });
+    
 
     // Toggle dropdown on click for Categories
     categoriesLink.addEventListener('click', (event) => {
