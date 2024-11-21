@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const { authRoutes, contactRoutes, profileRoutes, ProductRoutes } = require('./routes');
+const { authRoutes, contactRoutes, profileRoutes, ProductRoutes, MediaManagerRoutes } = require('./routes');
 
 const app = express();
 const port = 8000;
@@ -14,6 +14,7 @@ app.use('/auth', authRoutes);
 app.use('/Contact', contactRoutes)
 app.use('/profile', profileRoutes)
 app.use('/product', ProductRoutes)
+app.use('/media', MediaManagerRoutes)
 
 app.listen(port, () => {
   console.log(`Backend server running at http://localhost:${port}`);
