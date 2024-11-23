@@ -20,15 +20,26 @@ class CloudinaryHelper {
 
   async uploadMultipleFiles(files, options = {}) {
     try {
-      const uploadPromises = files.map(({ id, name, url }) =>
-        this.uploadFile(url, { ...options, public_id: id, context: { alt: name, caption: name } })
-      );
+      const uploadPromises = files.map(({ id, name, url }) => {
+        const displayName = name || id;
+        return this.uploadFile(url, { 
+          ...options, 
+          public_id: id,
+          display_name: displayName,  // Add display_name to Cloudinary options
+          context: { 
+            alt: displayName, 
+            caption: displayName,
+            display_name: displayName  // Add to context as well
+          }
+        });
+      });
       const results = await Promise.all(uploadPromises);
       return results;
     } catch (error) {
       throw new Error(`Failed to upload multiple files: ${error.message}`);
     }
-  }
+}
+
 
   async getFileDetails(publicId) {
     try {

@@ -14,8 +14,8 @@ async function uploadFiles(req, res) {
         const { files } = req.body;
         const uploadResults = await cloudinaryHelper.uploadMultipleFiles(files, { folder: WARDROBE_FOLDER });
         
-        // Filter out sensitive information
-        const sanitizedResults = uploadResults.map(file => ({
+        // Filter out sensitive information and include original name
+        const sanitizedResults = uploadResults.map((file, index) => ({
             public_id: file.public_id,
             url: file.secure_url,
             width: file.width,
@@ -25,7 +25,7 @@ async function uploadFiles(req, res) {
             created_at: file.created_at,
             tags: file.tags,
             context: file.context,
-            display_name: file.display_name
+            display_name: files[index].name || files[index].id // Use the original name from request
         }));
 
         res.status(200).json({
@@ -36,6 +36,7 @@ async function uploadFiles(req, res) {
         res.status(500).json({ message: 'Error uploading files', error: error.message });
     }
 }
+
 
 
 async function getFileDetails(req, res) {
