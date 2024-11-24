@@ -25,11 +25,11 @@ class CloudinaryHelper {
         return this.uploadFile(url, { 
           ...options, 
           public_id: id,
-          display_name: displayName,  // Add display_name to Cloudinary options
+          display_name: displayName,
           context: { 
             alt: displayName, 
             caption: displayName,
-            display_name: displayName  // Add to context as well
+            display_name: displayName  
           }
         });
       });

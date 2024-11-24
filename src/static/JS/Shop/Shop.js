@@ -93,14 +93,22 @@ document.addEventListener('DOMContentLoaded', function () {
             const featuredBoxes = document.querySelectorAll('.featured-box');
             products.forEach((product, index) => {
                 if (featuredBoxes[index]) {
+                    // Update text content
                     featuredBoxes[index].querySelector('.name').textContent = product.productName;
                     featuredBoxes[index].querySelector('.price').textContent = `$${product.productPrice}`;
+                    
+                    // Update image
+                    const imgDiv = featuredBoxes[index].querySelector('.img');
+                    imgDiv.style.backgroundImage = `url(${product.productImage})`;
+                    imgDiv.style.backgroundSize = 'cover';
+                    imgDiv.style.backgroundPosition = 'center';
                 }
             });
         } catch (error) {
             console.error('Error loading featured products:', error);
         }
     }
+    
 
     // Function to fetch new arrivals
     async function loadNewArrivals() {
@@ -117,14 +125,22 @@ document.addEventListener('DOMContentLoaded', function () {
             const arrivalBoxes = document.querySelectorAll('.Arrival-box');
             products.forEach((product, index) => {
                 if (arrivalBoxes[index]) {
+                    // Update text content
                     arrivalBoxes[index].querySelector('.name').textContent = product.productName;
                     arrivalBoxes[index].querySelector('p').textContent = product.productDescription;
+                    
+                    // Update image
+                    const imgDiv = arrivalBoxes[index].querySelector('.img');
+                    imgDiv.style.backgroundImage = `url(${product.productImage})`;
+                    imgDiv.style.backgroundSize = 'cover';
+                    imgDiv.style.backgroundPosition = 'center';
                 }
             });
         } catch (error) {
             console.error('Error loading new arrivals:', error);
         }
     }
+    
 
     // Initialize dynamic content loading
     loadFeaturedProducts();
