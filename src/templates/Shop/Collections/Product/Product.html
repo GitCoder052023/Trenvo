@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,11 +8,6 @@
     <link rel="stylesheet" href="/static/CSS/output.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" href="/static/Assets/img/Wardrobe_Logo.png" type="image/png">
-    <style>
-        #carousel img {
-            width: 100%;
-        }
-    </style>
 </head>
 
 <body class="flex flex-col min-h-screen bg-gray-50">
@@ -19,12 +15,13 @@
     <!-- Navbar -->
     <header class="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur-md">
         <div class="container mx-auto flex h-14 items-center justify-between px-4">
-            <a class="flex items-center space-x-2" href="#">
+            <a class="flex items-center space-x-2" href="/">
                 <span class="font-bold text-xl">Wardrobe</span>
             </a>
             <nav class="flex items-center space-x-6 text-sm font-medium">
                 <a class="transition-colors hover:text-gray-800 text-gray-600" href="/Product/Product1">Products</a>
-                <a class="transition-colors hover:text-gray-800 text-gray-600" href="/shop/Collection/Categories/">Categories</a>
+                <a class="transition-colors hover:text-gray-800 text-gray-600"
+                    href="/shop/Collection/Categories/">Categories</a>
                 <a class="transition-colors hover:text-gray-800 text-gray-600" href="/info/About">About</a>
                 <a class="transition-colors hover:text-gray-800 text-gray-600" href="/info/Contact">Contact</a>
             </nav>
@@ -38,24 +35,16 @@
             <!-- Product Images and Buttons -->
             <div class="space-y-6">
                 <div class="relative overflow-hidden rounded-lg shadow-lg">
-                    <div id="carousel" class="flex transition-transform duration-500 ease-in-out">
-                        <img src="/static/Assets/img/Poduct/Gemini_Generated_Image_fg8k3dfg8k3dfg8k.jpeg" alt="Product image 1" class="w-full h-auto flex-shrink-0">
-                        <img src="/static/Assets/img/Poduct/Gemini_Generated_Image_gfjnoxgfjnoxgfjn.jpeg" alt="Product image 2" class="w-full h-auto flex-shrink-0">
-                        <img src="/static/Assets/img/Poduct/Gemini_Generated_Image_nshecgnshecgnshe.jpeg" alt="Product image 3" class="w-full h-auto flex-shrink-0">
-                        <img src="/static/Assets/img/Poduct/Gemini_Generated_Image_rm7y27rm7y27rm7y.jpeg" alt="Product image 4" class="w-full h-auto flex-shrink-0">
+                    <!-- Replace the carousel div with this single image -->
+                    <div class="relative rounded-lg shadow-lg">
+                        <img src=""
+                            alt="Product image" class="w-full h-auto rounded-lg">
                     </div>
-                    <button id="prevBtn"
-                        class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/80 rounded-full p-2 shadow-md">
-                        <i class="fas fa-chevron-left text-gray-800"></i>
-                    </button>
-                    <button id="nextBtn"
-                        class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/80 rounded-full p-2 shadow-md">
-                        <i class="fas fa-chevron-right text-gray-800"></i>
-                    </button>
                 </div>
                 <div class="flex space-x-4 md:mt-6">
                     <button
-                        class="flex-1 bg-blue-500 text-white px-4 py-2 rounded-md font-medium flex items-center justify-center hover:bg-blue-600 transition" id="BuyBtn">
+                        class="flex-1 bg-blue-500 text-white px-4 py-2 rounded-md font-medium flex items-center justify-center hover:bg-blue-600 transition"
+                        id="BuyBtn">
                         <i class="fas fa-credit-card mr-2"></i> Buy Now
                     </button>
                     <button
@@ -67,7 +56,7 @@
 
             <!-- Product Info -->
             <div class="flex flex-col justify-center">
-                <h1 class="text-3xl font-bold text-gray-900 mb-2">Premium Wireless Headphones</h1>
+                <h1 class="text-3xl font-bold text-gray-900 mb-2"></h1>
                 <div class="flex items-center mb-4">
                     <div class="flex">
                         <i class="fas fa-star text-yellow-400 mr-1"></i>
@@ -79,13 +68,8 @@
                     <span class="ml-2 text-sm text-gray-600">(128 reviews)</span>
                 </div>
                 <p class="text-gray-600 mb-4">
-                    Experience crystal-clear audio with our premium wireless headphones. Featuring advanced
-                    noise-cancellation
-                    technology and long-lasting battery life, these headphones are perfect for music lovers and
-                    professionals
-                    alike.
                 </p>
-                <p class="text-2xl font-bold text-gray-900 mb-6">$299.99</p>
+                <p class="text-2xl font-bold text-gray-900 mb-6"></p>
             </div>
         </div>
 
@@ -165,7 +149,8 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Product Card -->
                 <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="/static/Assets/img/products/f1.jpg" alt="Wireless Earbuds" class="w-full h-48 object-cover">
+                    <img src="/static/Assets/img/products/f1.jpg" alt="Wireless Earbuds"
+                        class="w-full h-48 object-cover">
                     <div class="p-4">
                         <h3 class="font-semibold text-lg mb-2">Wireless Earbuds</h3>
                         <div class="flex items-center mb-2">
@@ -209,7 +194,8 @@
                     </div>
                 </div>
                 <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="/static/Assets/img/products/f3.jpg" alt="Bluetooth Speaker" class="w-full h-48 object-cover">
+                    <img src="/static/Assets/img/products/f3.jpg" alt="Bluetooth Speaker"
+                        class="w-full h-48 object-cover">
                     <div class="p-4">
                         <h3 class="font-semibold text-lg mb-2">Bluetooth Speaker</h3>
                         <div class="flex items-center mb-2">
@@ -230,7 +216,8 @@
                     </div>
                 </div>
                 <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="/static/Assets/img/products/f4.jpg" alt="Portable DAC/Amp" class="w-full h-48 object-cover">
+                    <img src="/static/Assets/img/products/f4.jpg" alt="Portable DAC/Amp"
+                        class="w-full h-48 object-cover">
                     <div class="p-4">
                         <h3 class="font-semibold text-lg mb-2">Portable DAC/Amp</h3>
                         <div class="flex items-center mb-2">
@@ -260,7 +247,9 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
                     <h3 class="text-lg font-semibold mb-4">About Us</h3>
-                    <p class="text-gray-400">We are dedicated to providing our customers with a fashion-forward collection of high-quality clothing, wearables, and accessories that not only look great but also feel incredibly comfortable.</p>
+                    <p class="text-gray-400">We are dedicated to providing our customers with a fashion-forward
+                        collection of high-quality clothing, wearables, and accessories that not only look great but
+                        also feel incredibly comfortable.</p>
                 </div>
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
@@ -288,4 +277,5 @@
     <!-- Link to external JavaScript file -->
     <script src="/static/JS/Shop/Collection/Product/Product.js"></script>
 </body>
+
 </html>

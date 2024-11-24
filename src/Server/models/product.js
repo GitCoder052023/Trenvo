@@ -35,8 +35,15 @@ async function getProductsByFeature(feature) {
         .toArray();
 }
 
+async function getProductById(productId) {
+    const db = await connectToDatabase();
+    const ObjectId = require('mongodb').ObjectId;
+    return db.collection('Products').findOne({ _id: new ObjectId(productId) });
+}
+
 module.exports = { 
     getProductsByCategory, 
     getProductsByKeywords,
-    getProductsByFeature 
+    getProductsByFeature,
+    getProductById
 };

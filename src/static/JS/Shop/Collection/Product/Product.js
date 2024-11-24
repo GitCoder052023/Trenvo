@@ -1,34 +1,26 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Image Carousel
-    const carousel = document.getElementById('carousel');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
-    const buyBtn = document.getElementById('BuyBtn');
-    const totalImages = carousel.children.length;
-    let currentIndex = 0;
-    let isAnimating = false;
+document.addEventListener('DOMContentLoaded', async () => {
+    // Extract product ID from URL
+    const productId = window.location.pathname.split('/').pop();
 
+    try {
+        // Fetch product details
+        const response = await fetch(`http://localhost:8000/product/get/${productId}`);
+        const product = await response.json();
+
+        // Update product details in the DOM
+        document.querySelector('h1.text-3xl').textContent = product.productName;
+        document.querySelector('p.text-gray-600').textContent = product.productDescription;
+        document.querySelector('img[alt="Product image"]').src = product.productImage;
+        document.querySelector('p.text-2xl.font-bold.text-gray-900').textContent = `$${product.productPrice}`;
+
+    } catch (error) {
+        console.error('Error loading product details:', error);
+    }
+
+    const buyBtn = document.getElementById('BuyBtn');
+    
     buyBtn.addEventListener('click', () => {
         window.location.href = "/Payments/Checkout/";
-    });
-
-    const updateCarousel = () => {
-        if (isAnimating) return;
-        isAnimating = true;
-        carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
-        setTimeout(() => {
-            isAnimating = false;
-        }, 500); // Duration should match the CSS transition
-    };
-
-    prevBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex - 1 + totalImages) % totalImages;
-        updateCarousel();
-    });
-
-    nextBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex + 1) % totalImages;
-        updateCarousel();
     });
 
     // Tabs

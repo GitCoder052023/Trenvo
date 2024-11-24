@@ -42,9 +42,23 @@ async function getProductsByFeature(req, res) {
     }
 }
 
+async function getProductById(req, res) {
+    try {
+        const { id } = req.params;
+        const product = await Product.getProductById(id);
+        if (!product) {
+            return res.status(404).json({ message: 'Product not found' });
+        }
+        res.status(200).json(product);
+    } catch (error) {
+        res.status(500).json({ message: 'Internal Server error', error: error.message });
+    }
+}
+
 module.exports = { 
     getProductsByCategory, 
     getProductsByKeywords,
-    getProductsByFeature 
+    getProductsByFeature,
+    getProductById
 };
 

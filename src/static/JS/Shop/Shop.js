@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Select navbar items and dropdown menus
     const categoriesLink = document.getElementById('cat');
     const accountLink = document.getElementById('acc');
     const dropdownMenu2 = document.getElementById('dropdown-menu2');
@@ -7,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const logoutLink = document.getElementById('logout');
     const userId =  window.localStorage.getItem('userId');
     const baseURL = "/shop/Collection/Categories/";
+    let productNameToId = {};
 
     const SBC_Cards = {
         "SBC_Mens": document.getElementById('Mens'),
@@ -90,18 +90,27 @@ document.addEventListener('DOMContentLoaded', function () {
             });
             const products = await response.json();
             
+            // Store product name to ID mappings
+            products.forEach(product => {
+                productNameToId[product.productName] = product._id;
+            });
+    
             const featuredBoxes = document.querySelectorAll('.featured-box');
             products.forEach((product, index) => {
                 if (featuredBoxes[index]) {
-                    // Update text content
                     featuredBoxes[index].querySelector('.name').textContent = product.productName;
-                    featuredBoxes[index].querySelector('.price').textContent = `$${product.productPrice}`;
+                    featuredBoxes[index].querySelector('.price').textContent = `${product.productPrice}`;
                     
-                    // Update image
                     const imgDiv = featuredBoxes[index].querySelector('.img');
                     imgDiv.style.backgroundImage = `url(${product.productImage})`;
                     imgDiv.style.backgroundSize = 'cover';
                     imgDiv.style.backgroundPosition = 'center';
+    
+                    // Add click handler
+                    featuredBoxes[index].addEventListener('click', () => {
+                        const productId = productNameToId[product.productName];
+                        window.location.href = `/Product/${productId}`;
+                    });
                 }
             });
         } catch (error) {
@@ -122,18 +131,28 @@ document.addEventListener('DOMContentLoaded', function () {
             });
             const products = await response.json();
             
+            // Store product name to ID mappings
+            products.forEach(product => {
+                productNameToId[product.productName] = product._id;
+            });
+    
             const arrivalBoxes = document.querySelectorAll('.Arrival-box');
             products.forEach((product, index) => {
                 if (arrivalBoxes[index]) {
-                    // Update text content
                     arrivalBoxes[index].querySelector('.name').textContent = product.productName;
                     arrivalBoxes[index].querySelector('p').textContent = product.productDescription;
                     
-                    // Update image
                     const imgDiv = arrivalBoxes[index].querySelector('.img');
                     imgDiv.style.backgroundImage = `url(${product.productImage})`;
                     imgDiv.style.backgroundSize = 'cover';
                     imgDiv.style.backgroundPosition = 'center';
+    
+                    // Update the View Detail button click handler
+                    const viewDetailBtn = arrivalBoxes[index].querySelector('button');
+                    viewDetailBtn.onclick = () => {
+                        const productId = productNameToId[product.productName];
+                        window.location.href = `/Product/${productId}`;
+                    };
                 }
             });
         } catch (error) {
