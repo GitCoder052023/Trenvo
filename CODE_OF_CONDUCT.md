@@ -2,7 +2,7 @@
 
 ## Our Pledge
 
-We, as contributors and maintainers of The Wardrobe, are committed to fostering an open, welcoming, and inclusive community. We pledge to make participation in this project a harassment-free experience for everyone, regardless of age, body size, disability, ethnicity, gender identity and expression, level of experience, nationality, personal appearance, race, religion, or sexual identity and orientation.
+We, as contributors and maintainers of Wardrobe, are committed to fostering an open, welcoming, and inclusive community. We pledge to make participation in this project a harassment-free experience for everyone, regardless of age, body size, disability, ethnicity, gender identity and expression, level of experience, nationality, personal appearance, race, religion, or sexual identity and orientation.
 
 ## Our Standards
 

@@ -20,12 +20,3 @@ shop.addEventListener("click", ()=>{
 ProfileButton.addEventListener("click", ()=>{
     window.location.href = "/User/Profile/"
 })
-
-productCards.forEach(card => {
-    card.addEventListener('click', function(e) {
-        if (e.target.tagName !== 'BUTTON') {
-            e.preventDefault();
-            window.location.href = '/Product/Product1';
-        }
-    });
-});

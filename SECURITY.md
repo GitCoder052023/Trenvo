@@ -2,7 +2,7 @@
 
 ## Reporting a Vulnerability
 
-If you discover a security vulnerability in **The Wardrobe**, please report it responsibly. We request that you avoid publicizing the issue until it has been properly reviewed and resolved.
+If you discover a security vulnerability in **Wardrobe**, please report it responsibly. We request that you avoid publicizing the issue until it has been properly reviewed and resolved.
 
 To report a vulnerability:
 - Email us at **hamdankhubaib959@gmail.com**
@@ -39,7 +39,7 @@ We encourage all contributors to follow these security best practices:
 - Run security tests before submitting a pull request.
 - Use secure coding practices and avoid introducing new vulnerabilities.
 
-Thank you for helping to keep **The Wardrobe** secure!
+Thank you for helping to keep **Wardrobe** secure!
 
 ---
 

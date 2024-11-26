@@ -1,4 +1,4 @@
-# Contributing to The Wardrobe
+# Contributing to Wardrobe
 
 Thank you for considering contributing to The Wardrobe! Contributions from the community are essential to making this project better. To get started, please follow the guidelines below.
 
@@ -11,7 +11,7 @@ Thank you for considering contributing to The Wardrobe! Contributions from the c
     - Clone your forked repository to your local machine using:
 
     ```bash
-    git clone https://github.com/GitCoder052023/The-Wardrobe.git
+    git clone https://github.com/GitCoder052023/Wardrobe.git
     ```
 
 3. Create a branch:
@@ -57,4 +57,4 @@ Thank you for considering contributing to The Wardrobe! Contributions from the c
     - Expected and actual behavior.
     - Screenshots or error logs, if applicable.
 
-We value your time and contributions! Thank you for helping make **The Wardrobe** better.
+We value your time and contributions! Thank you for helping make **Wardrobe** better.

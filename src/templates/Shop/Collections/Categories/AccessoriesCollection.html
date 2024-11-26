@@ -17,44 +17,58 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
-                    <a href="/"><span class="text-gray-800 text-2xl font-bold">Wardrobe</span></a> <!-- Softer text color -->
+                    <a href="/"><span class="text-gray-800 text-2xl font-bold">Wardrobe</span></a>
+                    <!-- Softer text color -->
                 </div>
                 <div class="hidden sm:!flex items-center space-x-4 sm:ml-1 md:ml-0">
-                    <a href="/Shop" class=" text-gray-600 hover:text-gray-800">Shop</a>  <!-- Softer hover color -->
+                    <a href="/Shop" class=" text-gray-600 hover:text-gray-800">Shop</a> <!-- Softer hover color -->
                     <a href="/shop/Collection/Categories/Mens" class="text-gray-600 hover:text-gray-800">Men</a>
                     <a href="/shop/Collection/Categories/Womens" class="text-gray-600 hover:text-gray-800">Women</a>
-                    <a href="/shop/Collection/Categories/Accessories" class="text-gray-600 hover:text-gray-800">Accessories</a>
-                    <a href="/shop/Collection/Categories/Wearables" class="text-gray-600 hover:text-gray-800">Wearables</a>
+                    <a href="/shop/Collection/Categories/Accessories"
+                        class="text-gray-600 hover:text-gray-800">Accessories</a>
+                    <a href="/shop/Collection/Categories/Wearables"
+                        class="text-gray-600 hover:text-gray-800">Wearables</a>
                 </div>
                 <div class="flex items-center space-x-2 sm:space-x-4">
 
-                <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="mr-4 sm:hidden text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button"><svg class="w-2 h-2 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-                    </svg>
+                    <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown"
+                        class="mr-4 sm:hidden text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                        type="button"><svg class="w-2 h-2 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="none" viewBox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m1 1 4 4 4-4" />
+                        </svg>
                     </button>
-                    
+
                     <!-- Dropdown menu -->
-                    <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
-                        <ul class="text-center py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
-                          <li>
-                            <a href="/Shop" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-blue-600 dark:hover:text-white">Shop</a>
-                          </li>
-                          <li>
-                            <a href="/shop/Collection/Categories/Mens" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-blue-600 dark:hover:text-white">Men</a>
-                          </li>
-                          <li>
-                            <a href="/shop/Collection/Categories/Womens" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-blue-600 dark:hover:text-white">Women</a>
-                          </li>
-                          <li>
-                            <a href="/shop/Collection/Categories/Accessories" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-blue-600 dark:hover:text-white">Accessories</a>
-                          </li>
-                          <li>
-                            <a href="/shop/Collection/Categories/Wearables" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-blue-600 dark:hover:text-white">Wearables</a>
-                          </li>
+                    <div id="dropdown"
+                        class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                        <ul class="text-center py-2 text-sm text-gray-700 dark:text-gray-200"
+                            aria-labelledby="dropdownDefaultButton">
+                            <li>
+                                <a href="/Shop"
+                                    class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-blue-600 dark:hover:text-white">Shop</a>
+                            </li>
+                            <li>
+                                <a href="/shop/Collection/Categories/Mens"
+                                    class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-blue-600 dark:hover:text-white">Men</a>
+                            </li>
+                            <li>
+                                <a href="/shop/Collection/Categories/Womens"
+                                    class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-blue-600 dark:hover:text-white">Women</a>
+                            </li>
+                            <li>
+                                <a href="/shop/Collection/Categories/Accessories"
+                                    class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-blue-600 dark:hover:text-white">Accessories</a>
+                            </li>
+                            <li>
+                                <a href="/shop/Collection/Categories/Wearables"
+                                    class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-blue-600 dark:hover:text-white">Wearables</a>
+                            </li>
 
                         </ul>
                     </div>
-                    
+
                     <button class="text-gray-600 hover:text-gray-800 focus:outline-none" id="cart-icon">
                         <i class="fas fa-shopping-cart"></i>
                     </button>
@@ -63,16 +77,19 @@
                     </button>
                     <button class="text-gray-600 hover:text-gray-800 focus:outline-none" id="wishlist-icon">
                         <i class="fas fa-heart"></i>
-                    </button>                    
+                    </button>
                 </div>
             </div>
         </div>
     </nav>
 
     <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8" role="main">
-        <div class="items-center flex flex-col text-center md:!items-start md:!text-left bg-gray-100 rounded-lg p-6 mb-8 shadow-sm transform hover:scale-105 transition-transform duration-300"> <!-- Softer gradient -->
+        <div
+            class="items-center flex flex-col text-center md:!items-start md:!text-left bg-gray-100 rounded-lg p-6 mb-8 shadow-sm transform hover:scale-105 transition-transform duration-300">
+            <!-- Softer gradient -->
             <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-2">New Arrivals: Summer Collection</h2>
-            <p class=" text-gray-600 text-lg">Enjoy 20% off on selected items. Limited time offer.</p> <!-- Softer text color -->
+            <p class=" text-gray-600 text-lg">Enjoy 20% off on selected items. Limited time offer.</p>
+            <!-- Softer text color -->
             <!-- Softer text color -->
             <button
                 class="mt-4 bg-gray-800 text-white px-6 py-2 rounded-full font-semibold hover:bg-gray-700 transition duration-300"
@@ -94,7 +111,8 @@
                     </ul>
                 </div>
 
-                <div class="items-center justify-content flex flex-col bg-white rounded-lg shadow-sm p-6 mb-6 text-center lg:!text-left lg:!items-start">
+                <div
+                    class="items-center justify-content flex flex-col bg-white rounded-lg shadow-sm p-6 mb-6 text-center lg:!text-left lg:!items-start">
                     <h3 class="text-lg font-semibold text-gray-800 mb-4">Material</h3>
                     <div class="flex flex-col sm:flex-row sm:flex-wrap gap-2">
                         <button
@@ -109,7 +127,8 @@
                     </div>
                 </div>
 
-                <div class="items-center justify-content flex flex-col  bg-white rounded-lg shadow-sm p-6 mb-6 text-center lg:!text-left lg:!items-start">
+                <div
+                    class="items-center justify-content flex flex-col  bg-white rounded-lg shadow-sm p-6 mb-6 text-center lg:!text-left lg:!items-start">
                     <h3 class="text-lg font-semibold text-gray-800 mb-4">Color</h3>
                     <div class="flex flex-wrap gap-2">
                         <button
@@ -153,8 +172,10 @@
                     </div>
                 </div>
 
-                <div class="flex overflow-x-auto sm:!overflow-x-hidden overflow-y-hidden sm:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="min-w-[320px] sm:min-w-[0px] product-card bg-white rounded-lg shadow-sm overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                <div
+                    class="flex overflow-x-auto sm:!overflow-x-hidden overflow-y-hidden sm:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div
+                        class="min-w-[320px] sm:min-w-[0px] product-card bg-white rounded-lg shadow-sm overflow-hidden transform hover:scale-105 transition-transform duration-300">
                         <img src="/static/Assets/img/products/f1.jpg" alt="Leather Handbag"
                             class="w-full h-64 object-cover">
                         <div class="p-4">
@@ -165,7 +186,8 @@
                                 to Cart</button> <!-- Softer button color -->
                         </div>
                     </div>
-                    <div class="min-w-[320px] sm:min-w-[0px] product-card bg-white rounded-lg shadow-sm overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                    <div
+                        class="min-w-[320px] sm:min-w-[0px] product-card bg-white rounded-lg shadow-sm overflow-hidden transform hover:scale-105 transition-transform duration-300">
                         <img src="/static/Assets/img/products/f2.jpg" alt="Gold Necklace"
                             class="w-full h-64 object-cover">
                         <div class="p-4">
@@ -176,7 +198,8 @@
                                 to Cart</button> <!-- Softer button color -->
                         </div>
                     </div>
-                    <div class="min-w-[320px] sm:min-w-[0px] product-card bg-white rounded-lg shadow-sm overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                    <div
+                        class="min-w-[320px] sm:min-w-[0px] product-card bg-white rounded-lg shadow-sm overflow-hidden transform hover:scale-105 transition-transform duration-300">
                         <img src="/static/Assets/img/products/f3.jpg" alt="Elegant Pants"
                             class="w-full h-64 object-cover">
                         <div class="p-4">
@@ -190,6 +213,7 @@
                 </div>
             </div>
         </div>
+        <script src="/static/JS/Shop/Collection/Categories/AccessoriesCollection.js"></script>
         <script src="/static/Utilities/CategoriesCollection.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
 

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,49 +11,63 @@
     <link rel="icon" href="/static/Assets/img/Wardrobe_Logo.png" type="image/png">
 
 </head>
+
 <body class="bg-white font-sans"> <!-- Cleaner background -->
     <nav class="bg-white shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
-                    <a href="/"><span class="text-gray-800 text-2xl font-bold">Wardrobe</span></a> 
+                    <a href="/"><span class="text-gray-800 text-2xl font-bold">Wardrobe</span></a>
                 </div>
                 <div class="hidden sm:!flex items-center space-x-4 sm:ml-1 md:ml-0">
-                    <a href="/Shop" class=" text-gray-600 hover:text-gray-800">Shop</a> 
+                    <a href="/Shop" class=" text-gray-600 hover:text-gray-800">Shop</a>
                     <a href="/shop/Collection/Categories/Mens" class="text-gray-600 hover:text-gray-800">Men</a>
                     <a href="/shop/Collection/Categories/Womens" class="text-gray-600 hover:text-gray-800">Women</a>
-                    <a href="/shop/Collection/Categories/Accessories" class="text-gray-600 hover:text-gray-800">Accessories</a>
-                    <a href="/shop/Collection/Categories/Wearables" class="text-gray-600 hover:text-gray-800">Wearables</a>
+                    <a href="/shop/Collection/Categories/Accessories"
+                        class="text-gray-600 hover:text-gray-800">Accessories</a>
+                    <a href="/shop/Collection/Categories/Wearables"
+                        class="text-gray-600 hover:text-gray-800">Wearables</a>
                 </div>
                 <div class="flex items-center space-x-2 sm:space-x-4">
 
-                <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="mr-4 sm:hidden text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button"><svg class="w-2 h-2 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-                    </svg>
+                    <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown"
+                        class="mr-4 sm:hidden text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                        type="button"><svg class="w-2 h-2 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="none" viewBox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m1 1 4 4 4-4" />
+                        </svg>
                     </button>
-                    
+
                     <!-- Dropdown menu -->
-                    <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
-                        <ul class="text-center py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
-                          <li>
-                            <a href="/Shop" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-blue-600 dark:hover:text-white">Shop</a>
-                          </li>
-                          <li>
-                            <a href="/shop/Collection/Categories/Mens" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-blue-600 dark:hover:text-white">Men</a>
-                          </li>
-                          <li>
-                            <a href="/shop/Collection/Categories/Womens" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-blue-600 dark:hover:text-white">Women</a>
-                          </li>
-                          <li>
-                            <a href="/shop/Collection/Categories/Accessories" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-blue-600 dark:hover:text-white">Accessories</a>
-                          </li>
-                          <li>
-                            <a href="/shop/Collection/Categories/Wearables" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-blue-600 dark:hover:text-white">Wearables</a>
-                          </li>
+                    <div id="dropdown"
+                        class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                        <ul class="text-center py-2 text-sm text-gray-700 dark:text-gray-200"
+                            aria-labelledby="dropdownDefaultButton">
+                            <li>
+                                <a href="/Shop"
+                                    class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-blue-600 dark:hover:text-white">Shop</a>
+                            </li>
+                            <li>
+                                <a href="/shop/Collection/Categories/Mens"
+                                    class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-blue-600 dark:hover:text-white">Men</a>
+                            </li>
+                            <li>
+                                <a href="/shop/Collection/Categories/Womens"
+                                    class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-blue-600 dark:hover:text-white">Women</a>
+                            </li>
+                            <li>
+                                <a href="/shop/Collection/Categories/Accessories"
+                                    class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-blue-600 dark:hover:text-white">Accessories</a>
+                            </li>
+                            <li>
+                                <a href="/shop/Collection/Categories/Wearables"
+                                    class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-blue-600 dark:hover:text-white">Wearables</a>
+                            </li>
 
                         </ul>
                     </div>
-                    
+
                     <button class="text-gray-600 hover:text-gray-800 focus:outline-none" id="cart-icon">
                         <i class="fas fa-shopping-cart"></i>
                     </button>
@@ -61,17 +76,22 @@
                     </button>
                     <button class="text-gray-600 hover:text-gray-800 focus:outline-none" id="wishlist-icon">
                         <i class="fas fa-heart"></i>
-                    </button>                    
+                    </button>
                 </div>
             </div>
         </div>
     </nav>
 
     <main class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-        <div class="items-center flex flex-col text-center md:!items-start md:!text-left bg-gray-100 rounded-lg p-6 mb-8 shadow-sm transform hover:scale-105 transition-transform duration-300"> <!-- Softer gradient -->
+        <div
+            class="items-center flex flex-col text-center md:!items-start md:!text-left bg-gray-100 rounded-lg p-6 mb-8 shadow-sm transform hover:scale-105 transition-transform duration-300">
+            <!-- Softer gradient -->
             <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-2">New Arrivals: Summer Collection</h2>
-            <p class=" text-gray-600 text-lg">Enjoy 20% off on selected items. Limited time offer.</p> <!-- Softer text color -->
-            <button class="mt-4 bg-gray-800 text-white px-6 py-2 rounded-full font-semibold hover:bg-gray-700 transition duration-300" id="ShopBtn">Shop Now</button> <!-- Softer button color -->
+            <p class=" text-gray-600 text-lg">Enjoy 20% off on selected items. Limited time offer.</p>
+            <!-- Softer text color -->
+            <button
+                class="mt-4 bg-gray-800 text-white px-6 py-2 rounded-full font-semibold hover:bg-gray-700 transition duration-300"
+                id="ShopBtn">Shop Now</button> <!-- Softer button color -->
         </div>
 
         <div class="flex flex-col md:flex-row">
@@ -79,33 +99,51 @@
                 <div class="bg-white rounded-lg shadow-sm p-6 mb-6 text-center lg:!text-left">
                     <h3 class="text-lg font-semibold text-gray-800 mb-4">Categories</h3> <!-- Softer text color -->
                     <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-600 hover:text-gray-800 transition duration-300">Dresses</a></li> <!-- Softer hover color -->
+                        <li><a href="#" class="text-gray-600 hover:text-gray-800 transition duration-300">Dresses</a>
+                        </li> <!-- Softer hover color -->
                         <li><a href="#" class="text-gray-600 hover:text-gray-800 transition duration-300">Tops</a></li>
-                        <li><a href="#" class="text-gray-600 hover:text-gray-800 transition duration-300">Skirts</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-gray-800 transition duration-300">Skirts</a>
+                        </li>
                         <li><a href="#" class="text-gray-600 hover:text-gray-800 transition duration-300">Shoes</a></li>
-                        <li><a href="#" class="text-gray-600 hover:text-gray-800 transition duration-300">Accessories</a></li>
+                        <li><a href="#"
+                                class="text-gray-600 hover:text-gray-800 transition duration-300">Accessories</a></li>
                     </ul>
                 </div>
 
-                <div class="items-center justify-content flex flex-col bg-white rounded-lg shadow-sm p-6 mb-6 text-center lg:!text-left lg:!items-start">
+                <div
+                    class="items-center justify-content flex flex-col bg-white rounded-lg shadow-sm p-6 mb-6 text-center lg:!text-left lg:!items-start">
                     <h3 class="text-lg font-semibold text-gray-800 mb-4">Size</h3> <!-- Softer text color -->
                     <div class="flex sm:flex-wrap gap-2">
-                        <button class="px-3 py-1 border border-gray-300 rounded-full hover:bg-gray-200 hover:text-gray-800 transition duration-300">XS</button> <!-- Softer button color -->
-                        <button class="px-3 py-1 border border-gray-300 rounded-full hover:bg-gray-200 hover:text-gray-800 transition duration-300">S</button>
-                        <button class="px-3 py-1 border border-gray-300 rounded-full hover:bg-gray-200 hover:text-gray-800 transition duration-300">M</button>
-                        <button class="px-3 py-1 border border-gray-300 rounded-full hover:bg-gray-200 hover:text-gray-800 transition duration-300">L</button>
-                        <button class="px-3 py-1 border border-gray-300 rounded-full hover:bg-gray-200 hover:text-gray-800 transition duration-300">XL</button>
-                        <button class="px-3 py-1 border border-gray-300 rounded-full hover:bg-gray-200 hover:text-gray-800 transition duration-300">XXL</button>
+                        <button
+                            class="px-3 py-1 border border-gray-300 rounded-full hover:bg-gray-200 hover:text-gray-800 transition duration-300">XS</button>
+                        <!-- Softer button color -->
+                        <button
+                            class="px-3 py-1 border border-gray-300 rounded-full hover:bg-gray-200 hover:text-gray-800 transition duration-300">S</button>
+                        <button
+                            class="px-3 py-1 border border-gray-300 rounded-full hover:bg-gray-200 hover:text-gray-800 transition duration-300">M</button>
+                        <button
+                            class="px-3 py-1 border border-gray-300 rounded-full hover:bg-gray-200 hover:text-gray-800 transition duration-300">L</button>
+                        <button
+                            class="px-3 py-1 border border-gray-300 rounded-full hover:bg-gray-200 hover:text-gray-800 transition duration-300">XL</button>
+                        <button
+                            class="px-3 py-1 border border-gray-300 rounded-full hover:bg-gray-200 hover:text-gray-800 transition duration-300">XXL</button>
                     </div>
                 </div>
-                <div class="items-center justify-content flex flex-col  bg-white rounded-lg shadow-sm p-6 mb-6 text-center lg:!text-left lg:!items-start">
+                <div
+                    class="items-center justify-content flex flex-col  bg-white rounded-lg shadow-sm p-6 mb-6 text-center lg:!text-left lg:!items-start">
                     <h3 class="text-lg font-semibold text-gray-800 mb-4">Color</h3> <!-- Softer text color -->
                     <div class="flex flex-wrap gap-2">
-                        <button class="w-8 h-8 rounded-full bg-black hover:ring-2 hover:ring-gray-400 transition duration-300"></button> <!-- Softer ring color -->
-                        <button class="w-8 h-8 rounded-full bg-white border border-gray-300 hover:ring-2 hover:ring-gray-400 transition duration-300"></button>
-                        <button class="w-8 h-8 rounded-full bg-gray-400 hover:ring-2 hover:ring-gray-400 transition duration-300"></button>
-                        <button class="w-8 h-8 rounded-full bg-gray-400 hover:ring-2 hover:ring-gray-400 transition duration-300"></button>
-                        <button class="w-8 h-8 rounded-full bg-blue-400 hover:ring-2 hover:ring-gray-400 transition duration-300"></button>
+                        <button
+                            class="w-8 h-8 rounded-full bg-black hover:ring-2 hover:ring-gray-400 transition duration-300"></button>
+                        <!-- Softer ring color -->
+                        <button
+                            class="w-8 h-8 rounded-full bg-white border border-gray-300 hover:ring-2 hover:ring-gray-400 transition duration-300"></button>
+                        <button
+                            class="w-8 h-8 rounded-full bg-gray-400 hover:ring-2 hover:ring-gray-400 transition duration-300"></button>
+                        <button
+                            class="w-8 h-8 rounded-full bg-gray-400 hover:ring-2 hover:ring-gray-400 transition duration-300"></button>
+                        <button
+                            class="w-8 h-8 rounded-full bg-blue-400 hover:ring-2 hover:ring-gray-400 transition duration-300"></button>
                     </div>
                 </div>
 
@@ -126,44 +164,61 @@
                 <div class="flex flex-col sm:flex-row justify-between items-center mb-6">
                     <h2 class="text-3xl font-bold text-gray-800">Women's Collection</h2> <!-- Softer text color -->
                     <div class="relative mt-4 sm:mt-0">
-                        <input type="text" placeholder="Search..." class="pl-3 pr-10 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-gray-500">
-                        <button class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-600 hover:text-gray-800">
+                        <input type="text" placeholder="Search..."
+                            class="pl-3 pr-10 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-gray-500">
+                        <button
+                            class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-600 hover:text-gray-800">
                             <i class="fas fa-search"></i>
                         </button>
                     </div>
                 </div>
 
-                <div class="flex overflow-x-auto sm:!overflow-x-hidden overflow-y-hidden sm:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="min-w-[320px] sm:min-w-[0px] product-card bg-white rounded-lg shadow-sm overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                        <img src="/static/Assets/img/products/f1.jpg" alt="Casual Shirt" class="w-full h-64 object-cover">
+                <div
+                    class="flex overflow-x-auto sm:!overflow-x-hidden overflow-y-hidden sm:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div
+                        class="min-w-[320px] sm:min-w-[0px] product-card bg-white rounded-lg shadow-sm overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                        <img src="/static/Assets/img/products/f1.jpg" alt="Casual Shirt"
+                            class="w-full h-64 object-cover">
                         <div class="p-4">
                             <h3 class="text-lg font-semibold mb-2">Floral Dress</h3>
                             <p class="text-gray-800 font-bold mb-2">$79.99</p> <!-- Softer text color -->
-                            <button class="w-full bg-gray-800 text-white py-2 rounded-full hover:bg-gray-700 transition duration-300">Add to Cart</button> <!-- Softer button color -->
+                            <button
+                                class="w-full bg-gray-800 text-white py-2 rounded-full hover:bg-gray-700 transition duration-300">Add
+                                to Cart</button> <!-- Softer button color -->
                         </div>
                     </div>
-                    <div class="min-w-[320px] sm:min-w-[0px] product-card bg-white rounded-lg shadow-sm overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                        <img src="/static/Assets/img/products/f2.jpg" alt="Summer T-Shirt" class="w-full h-64 object-cover">
+                    <div
+                        class="min-w-[320px] sm:min-w-[0px] product-card bg-white rounded-lg shadow-sm overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                        <img src="/static/Assets/img/products/f2.jpg" alt="Summer T-Shirt"
+                            class="w-full h-64 object-cover">
                         <div class="p-4">
                             <h3 class="text-lg font-semibold mb-2">Summer Top</h3>
                             <p class="text-gray-800 font-bold mb-2">$49.99</p> <!-- Softer text color -->
-                            <button class="w-full bg-gray-800 text-white py-2 rounded-full hover:bg-gray-700 transition duration-300">Add to Cart</button> <!-- Softer button color -->
+                            <button
+                                class="w-full bg-gray-800 text-white py-2 rounded-full hover:bg-gray-700 transition duration-300">Add
+                                to Cart</button> <!-- Softer button color -->
                         </div>
                     </div>
-                    <div class="min-w-[320px] sm:min-w-[0px] product-card bg-white rounded-lg shadow-sm overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                        <img src="/static/Assets/img/products/f3.jpg" alt="Elegant Pants" class="w-full h-64 object-cover">
+                    <div
+                        class="min-w-[320px] sm:min-w-[0px] product-card bg-white rounded-lg shadow-sm overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                        <img src="/static/Assets/img/products/f3.jpg" alt="Elegant Pants"
+                            class="w-full h-64 object-cover">
                         <div class="p-4">
                             <h3 class="text-lg font-semibold mb-2">Elegant Skirt</h3>
                             <p class="text-gray-800 font-bold mb-2">$89.99</p> <!-- Softer text color -->
-                            <button class="w-full bg-gray-800 text-white py-2 rounded-full hover:bg-gray-700 transition duration-300">Add to Cart</button> <!-- Softer button color -->
+                            <button
+                                class="w-full bg-gray-800 text-white py-2 rounded-full hover:bg-gray-700 transition duration-300">Add
+                                to Cart</button> <!-- Softer button color -->
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </main>
+    <script src="/static/JS/Shop/Collection/Categories/WomenCollection.js"></script>
     <script src="/static/Utilities/CategoriesCollection.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
 
 </body>
+
 </html>

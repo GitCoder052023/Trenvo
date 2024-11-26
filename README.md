@@ -1,4 +1,4 @@
-﻿# 🛍️ The Wardrobe
+﻿# 🛍️ Wardrobe
 
 ![Status](https://img.shields.io/badge/Status-Under_Development-yellow?style=flat-square)
 ![License](https://img.shields.io/badge/License-CC%20BY--NC%204.0-blue?style=flat-square)
@@ -11,7 +11,7 @@
 
 ## 📖 About
 
-**The Wardrobe** is an elegant and luxurious e-commerce web application providing a seamless online shopping experience. The project is currently **under heavy development**, and many features are yet to be implemented.
+**Wardrobe** is an elegant and luxurious e-commerce web application providing a seamless online shopping experience. The project is currently **under heavy development**, and many features are yet to be implemented.
 
 > **Note:** This README is primarily for developers contributing to this project.
 
@@ -57,12 +57,12 @@ Before you begin, ensure you have the following installed:
 
 ### Step 1: Clone the Repository
 ```bash
-git clone https://github.com/GitCoder052023/The-Wardrobe.git
+git clone https://github.com/GitCoder052023/Wardrobe.git
 ```
 
 ### Step 2: Navigate to the Project Directory
 ```bash
-cd The-Wardrobe
+cd Wardrobe
 ```
 
 ### Step 3: Install Dependencies
@@ -78,6 +78,9 @@ MONGO_URI=MongoDB-URI
 JWT_SECRET=YOUR_JWT_SECRET
 SENDER_EMAIL=YOUR_EMAIL_ADDRESS
 SENDER_APP_PASSWORD=YOUR_APP_PASSWORD
+CLOUDINARY_CLOUD_NAME=REPLACE_WITH_YOUR_OWN_CLOUDINARY_CLOUD_NAME
+CLOUDINARY_API_KEY=REPLACE_WITH_YOUR_OWN_CLOUDINARY_API_KEY
+CLOUDNINARY_API_SECRET=REPLACE_WITH_YOUR_OWN_CLOUDNINARY_API_SECRET
 ```
 
 ### Step 5: Run the Application
@@ -91,7 +94,7 @@ Open your browser and go to `http://localhost:3000`.
 ## 🏗️ System Architecture
 
 ```bash
-The-Wardrobe
+Wardrobe
 |   .gitignore
 |   .env.example
 |   CODE_OF_CONDUCT.md
@@ -100,7 +103,7 @@ The-Wardrobe
 |   package-lock.json
 |   package.json
 |   tailwind.config.js
-|   README.md│
+|   README.md
 │
 └───src
     │   app.js
@@ -126,20 +129,26 @@ The-Wardrobe
     │   ├───controllers
     │   │       authController.js
     │   │       ContactController.js
+    │   │       MediaManagerController.js
+    │   │       ProductController.js
     │   │       profileController.js
     │   │       ResetPasswordController.js
     │   │
     │   ├───models
+    │   │       product.js
     │   │       User.js
     │   │
     │   ├───routes
     │   │       authRoutes.js
     │   │       ContactRoutes.js
     │   │       index.js
+    │   │       MediaManagerRoutes.js
+    │   │       ProductRoutes.js
     │   │       profileRoutes.js
     │   │
     │   └───utils
     │           authUtils.js
+    │           CloudinaryHelper.js
     │           passwordUtils.js
     │           SendMail.js
     │
@@ -187,6 +196,12 @@ The-Wardrobe
     │   │   │   └───Collection
     │   │   │       │   Collection.js
     │   │   │       │
+    │   │   │       ├───Categories
+    │   │   │       │       AccessoriesCollection.js
+    │   │   │       │       MenCollection.js
+    │   │   │       │       WearablesCollection.js
+    │   │   │       │       WomenCollection.js
+    │   │   │       │
     │   │   │       └───Product
     │   │   │               Product.js
     │   │   │
@@ -220,6 +235,7 @@ The-Wardrobe
         ├───info
         │       About.html
         │       Contact.html
+        │       Request_Success.html
         │
         ├───Orders
         │       Orders.html
