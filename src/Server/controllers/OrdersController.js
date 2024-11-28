@@ -1,15 +1,26 @@
 const { createOrder, getOrderById, getAllOrders, updateOrderStatus, deleteOrder, getOrdersByUserId } = require('../models/Order');
 
 async function createNewOrder(req, res) {
-    const orderData = {
-        product: {
-            name: req.body.productName,
+    const productsArray = Array.isArray(req.body.products) 
+        ? req.body.products 
+        : [{
+            productName: req.body.productName,
             image: req.body.image,
             description: req.body.description,
             price: req.body.price,
             quantity: req.body.quantity,
             size: req.body.size
-        },
+        }];
+
+    const orderData = {
+        products: productsArray.map(product => ({
+            name: product.productName,
+            image: product.image,
+            description: product.description,
+            price: product.price,
+            quantity: product.quantity,
+            size: product.size
+        })),
         customer: {
             userId: req.body.userId,
             name: req.body.name,
@@ -22,7 +33,9 @@ async function createNewOrder(req, res) {
             }
         },
         payment: {
-            isCOD: req.body.isCOD || false
+            isCOD: req.body.isCOD || false,
+            totalAmount: productsArray.reduce((total, product) => 
+                total + (product.price * product.quantity), 0)
         },
         status: {
             deliveryStatus: req.body.deliveryStatus || 'Pending',
