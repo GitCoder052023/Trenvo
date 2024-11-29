@@ -13,12 +13,46 @@ async function createCart(userId) {
 
 async function addProductToCart(userId, productData) {
   const db = await connectToDatabase();
-  return db.collection(COLLECTION_NAME).updateOne(
-    { userId },
-    { $push: { products: productData } },
-    { upsert: true }
-  );
+  
+  // Check if product with same name and size exists
+  const existingCart = await db.collection(COLLECTION_NAME).findOne({
+    userId,
+    'products': {
+      $elemMatch: {
+        'name': productData.name,
+        'size': productData.size
+      }
+    }
+  });
+
+  if (existingCart) {
+    // Product exists with same name and size, update quantity
+    return db.collection(COLLECTION_NAME).updateOne(
+      { 
+        userId,
+        'products': {
+          $elemMatch: {
+            'name': productData.name,
+            'size': productData.size
+          }
+        }
+      },
+      { 
+        $inc: { 
+          'products.$.quantity': productData.quantity 
+        }
+      }
+    );
+  } else {
+    // Product doesn't exist or has different size, add new product
+    return db.collection(COLLECTION_NAME).updateOne(
+      { userId },
+      { $push: { products: productData } },
+      { upsert: true }
+    );
+  }
 }
+
 
 async function getCartByUserId(userId) {
   const db = await connectToDatabase();
@@ -50,11 +84,51 @@ async function clearCart(userId) {
   );
 }
 
+async function getCartWithSummary(userId) {
+  const db = await connectToDatabase();
+  const cart = await db.collection(COLLECTION_NAME).findOne({ userId });
+  
+  if (!cart) return null;
+
+  // Calculate summary
+  let total = 0;
+  const summaryItems = {};
+
+  cart.products.forEach(product => {
+    const amount = product.price * product.quantity;
+    total += amount;
+    
+    // Group by product name
+    if (summaryItems[product.name]) {
+      summaryItems[product.name].quantity += product.quantity;
+      summaryItems[product.name].amount += amount;
+    } else {
+      summaryItems[product.name] = {
+        quantity: product.quantity,
+        amount: amount
+      };
+    }
+  });
+
+  // Format summary lines
+  const summary = Object.entries(summaryItems).map(([name, details]) => {
+    return `${name} (${details.quantity}): ₹${details.amount}`;
+  });
+
+  return {
+    cart,
+    summary,
+    total: `₹${total}`
+  };
+}
+
+
 module.exports = {
   createCart,
   addProductToCart,
   getCartByUserId,
   updateProductInCart,
   removeProductFromCart,
-  clearCart
+  clearCart,
+  getCartWithSummary
 };
