@@ -2,7 +2,7 @@
 
 ## Reporting a Vulnerability
 
-If you discover a security vulnerability in **Wardrobe**, please report it responsibly. We request that you avoid publicizing the issue until it has been properly reviewed and resolved.
+If you discover a security vulnerability in **Trenvo**, please report it responsibly. We request that you avoid publicizing the issue until it has been properly reviewed and resolved.
 
 To report a vulnerability:
 - Email us at **hamdankhubaib959@gmail.com**
@@ -24,7 +24,7 @@ We ask that security researchers:
 
 ## Security Measures
 
-The Wardrobe project includes several security measures to help protect user data:
+The Trenvo project includes several security measures to help protect user data:
 - **HTTPS**: All traffic should be routed through HTTPS for secure communication.
 - **Authentication**: We enforce secure password storage and provide JWT-based sessions for user logins.
 - **Data Encryption**: Sensitive data, including user passwords, is encrypted.
@@ -39,7 +39,7 @@ We encourage all contributors to follow these security best practices:
 - Run security tests before submitting a pull request.
 - Use secure coding practices and avoid introducing new vulnerabilities.
 
-Thank you for helping to keep **Wardrobe** secure!
+Thank you for helping to keep **Trenvo** secure!
 
 ---
 

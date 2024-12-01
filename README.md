@@ -1,8 +1,8 @@
-﻿# 🛍️ Wardrobe
+﻿# 🛍️ Trenvo
 
 ![Status](https://img.shields.io/badge/Status-Under_Development-yellow?style=flat-square)
 ![License](https://img.shields.io/badge/License-CC%20BY--NC%204.0-blue?style=flat-square)
-![Contributors](https://img.shields.io/github/contributors/GitCoder052023/The-Wardrobe?style=flat-square)
+![Contributors](https://img.shields.io/github/contributors/GitCoder052023/The-Trenvo?style=flat-square)
 ![Node.js](https://img.shields.io/badge/Node.js-16.x-green?style=flat-square)
 ![Express.js](https://img.shields.io/badge/Express.js-4.x-brightgreen?style=flat-square)
 ![MongoDB](https://img.shields.io/badge/MongoDB-5.x-darkgreen?style=flat-square)
@@ -11,7 +11,7 @@
 
 ## 📖 About
 
-**Wardrobe** is an elegant and luxurious e-commerce web application providing a seamless online shopping experience. The project is currently **under heavy development**, and many features are yet to be implemented.
+**Trenvo** is an elegant and luxurious e-commerce web application providing a seamless online shopping experience. The project is currently **under heavy development**, and many features are yet to be implemented.
 
 > **Note:** This README is primarily for developers contributing to this project.
 
@@ -57,12 +57,12 @@ Before you begin, ensure you have the following installed:
 
 ### Step 1: Clone the Repository
 ```bash
-git clone https://github.com/GitCoder052023/Wardrobe.git
+git clone https://github.com/GitCoder052023/Trenvo.git
 ```
 
 ### Step 2: Navigate to the Project Directory
 ```bash
-cd Wardrobe
+cd Trenvo
 ```
 
 ### Step 3: Install Dependencies
@@ -94,7 +94,7 @@ Open your browser and go to `http://localhost:3000`.
 ## 🏗️ System Architecture
 
 ```bash
-Wardrobe
+Trenvo
 |   .gitignore
 |   .env.example
 |   CODE_OF_CONDUCT.md
