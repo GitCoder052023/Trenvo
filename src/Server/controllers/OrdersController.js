@@ -27,13 +27,12 @@ async function createNewOrder(req, res) {
             phone: req.body.phone,
             address: {
                 locality: req.body.locality,
-                area: req.body.area,
                 street: req.body.street,
                 landmark: req.body.landmark
             }
         },
         payment: {
-            isCOD: req.body.isCOD || false,
+            paymentMethod: req.body.paymentMethod,
             totalAmount: productsArray.reduce((total, product) => 
                 total + (product.price * product.quantity), 0)
         },

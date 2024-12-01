@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const buyBtn = document.getElementById('BuyBtn');
     
     buyBtn.addEventListener('click', () => {
-        window.location.href = "/Payments/Checkout/";
+        window.location.href = `/Payments/Checkout/${productId}`;
     });
 
     // Tabs

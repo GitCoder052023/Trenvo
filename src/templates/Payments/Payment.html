@@ -20,109 +20,13 @@
         <h2 class="text-2xl font-semibold text-gray-600">
           Secure Checkout Process
         </h2>
-        <p class="text-gray-500 mt-2">
-          You're just a few steps away from elevating your Trenvo!
-        </p>
       </div>
       <form
         id="checkoutForm"
         class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
       >
-        <div id="addressStep" class="mb-8">
-          <h2 class="text-2xl font-bold mb-4">Address Information</h2>
-          <div class="mb-4">
-            <label
-              class="block text-gray-700 text-sm font-bold mb-2"
-              for="phone"
-            >
-              Phone Number *
-            </label>
-            <input
-              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              id="phone"
-              type="tel"
-              required
-            />
-          </div>
-          <div class="mb-4">
-            <label
-              class="block text-gray-700 text-sm font-bold mb-2"
-              for="secondaryPhone"
-            >
-              Secondary Phone Number
-            </label>
-            <input
-              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              id="secondaryPhone"
-              type="tel"
-            />
-          </div>
-          <div class="mb-4">
-            <label
-              class="block text-gray-700 text-sm font-bold mb-2"
-              for="locality"
-            >
-              Locality *
-            </label>
-            <input
-              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              id="locality"
-              type="text"
-              required
-            />
-          </div>
-          <div class="mb-4">
-            <label
-              class="block text-gray-700 text-sm font-bold mb-2"
-              for="area"
-            >
-              Area *
-            </label>
-            <input
-              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              id="area"
-              type="text"
-              required
-            />
-          </div>
-          <div class="mb-4">
-            <label
-              class="block text-gray-700 text-sm font-bold mb-2"
-              for="street"
-            >
-              Street *
-            </label>
-            <input
-              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              id="street"
-              type="text"
-              required
-            />
-          </div>
-          <div class="mb-4">
-            <label
-              class="block text-gray-700 text-sm font-bold mb-2"
-              for="landmark"
-            >
-              Landmark
-            </label>
-            <input
-              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              id="landmark"
-              type="text"
-            />
-          </div>
-          <button
-            id="continueToPayment"
-            type="button"
-            class="bg-gray-300 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline cursor-not-allowed"
-            disabled
-          >
-            Continue to Payment
-          </button>
-        </div>
 
-        <div id="paymentStep" class="hidden mb-8">
+        <div id="paymentStep" class="mb-8">
           <h2 class="text-2xl font-bold mb-6">Payment Information</h2>
 
           <div class="mb-8">
@@ -265,7 +169,7 @@
           <div class="text-center">
             <button
               type="button"
-              onclick="resetForm()"
+              onclick="window.location.href='/Shop'"
               class="bg-[#3b82f6] hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full focus:outline-none focus:shadow-outline transition duration-300"
             >
               Back to Home
