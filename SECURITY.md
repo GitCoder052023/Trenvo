@@ -24,7 +24,7 @@ We ask that security researchers:
 
 ## Security Measures
 
-The Trenvo project includes several security measures to help protect user data:
+Trenvo project includes several security measures to help protect user data:
 - **HTTPS**: All traffic should be routed through HTTPS for secure communication.
 - **Authentication**: We enforce secure password storage and provide JWT-based sessions for user logins.
 - **Data Encryption**: Sensitive data, including user passwords, is encrypted.

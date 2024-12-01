@@ -1,6 +1,6 @@
 # Contributing to Trenvo
 
-Thank you for considering contributing to The Trenvo! Contributions from the community are essential to making this project better. To get started, please follow the guidelines below.
+Thank you for considering contributing to Trenvo! Contributions from the community are essential to making this project better. To get started, please follow the guidelines below.
 
 ## How to Contribute
 
