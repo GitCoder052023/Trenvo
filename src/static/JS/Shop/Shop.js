@@ -6,7 +6,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const logoutLink = document.getElementById('logout');
     const userId =  window.localStorage.getItem('userId');
     const baseURL = "/shop/Collection/Categories/";
+    const OrderLink = document.getElementById('OrderLink');
     let productNameToId = {};
+
+    OrderLink.addEventListener('click', () => {
+        window.location.href = `/User/Orders/${userId}`;
+    });
 
     const SBC_Cards = {
         "SBC_Mens": document.getElementById('Mens'),

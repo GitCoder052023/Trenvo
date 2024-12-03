@@ -13,9 +13,40 @@ document.addEventListener('DOMContentLoaded', async () => {
     const displaySection = document.getElementById('displaySection');
     const editButton = document.getElementById('editButton');
     const cancelButton = document.getElementById('cancelButton');
+    const userId = window.localStorage.getItem('userId');
+    const OrderLink = document.getElementById('OrderLink');
+    const logoutLink = document.getElementById('Logout');
+
+    OrderLink.addEventListener('click', () => {
+        window.location.href = `/User/Orders/${userId}`;
+    });
+
+    logoutLink.addEventListener('click', async () => {
+        try {
+            const response = await fetch('http://localhost:8000/profile/logout', {
+                method: 'DELETE',
+                headers: {
+                    'Authorization': userId,
+                    'Content-Type': 'application/json'
+                }
+            });
+    
+            const data = await response.json();
+    
+            if (response.ok) {
+                window.localStorage.removeItem('userId');
+                window.localStorage.removeItem('jwtToken');
+                window.location.href = '/';
+            } else {
+                console.log('Logout failed:', data.message);
+            }
+        } catch (error) {
+            console.error('Error during logout:', error);
+        }
+    });
+
 
     async function getUserProfile() {
-        const userId = localStorage.getItem('userId');
         if (!userId) {
             window.location.href = '/Auth/Login';
             return;

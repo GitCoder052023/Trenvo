@@ -1,4 +1,7 @@
-// Fetch the order tracking data from the JSON file
+document.getElementById('backBtn').addEventListener('click', function() {
+    window.location.href = `/User/Orders/${window.localStorage.getItem('userId')}`;
+});
+
 fetch('/static/JSON/Tracking_Data.json')
   .then(response => {
     if (!response.ok) {
