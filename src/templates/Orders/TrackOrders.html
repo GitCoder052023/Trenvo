@@ -3,104 +3,105 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Order Tracking Details - Trenvo</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Order Tracking - Trenvo</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="/static/CSS/output.css">
   <link rel="icon" href="/static/Assets/img/Trenvo_Logo.jpg" type="image/png">
 </head>
-<body class="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+<body class="min-h-screen bg-gray-50 py-10 px-4 sm:px-8">
 
-  <div class="max-w-4xl mx-auto bg-white shadow-md rounded-lg overflow-hidden">
-    <div class="p-6">
-      
-      <div class="mb-8 flex items-center">
-        <a href="#" id="backBtn" class="text-primary hover:text-primary/90 flex items-center">
+  <div class="max-w-5xl mx-auto bg-white shadow-lg rounded-xl">
+    <div class="p-8">
+      <div class="mb-6 flex items-center">
+        <a href="#" id="backBtn" class="text-blue-600 hover:text-blue-500 flex items-center">
           <i class="fas fa-arrow-left mr-2"></i>
-          Back to Orders
+          <span class="font-medium">Back to Orders</span>
         </a>
       </div>
 
-      <h1 class="text-3xl font-bold mb-8">Order Tracking Details</h1>
+      <h1 class="text-3xl font-extrabold text-gray-800 mb-8">Order Tracking Details</h1>
 
+      <!-- Order Information -->
       <section class="mb-8">
-        <h2 class="text-2xl font-semibold mb-4">Order Information</h2>
-        <table class="w-full border-collapse">
-          <tbody>
-            <tr class="border-b">
-              <td class="py-2 font-medium">Order Number:</td>
-              <td class="py-2" id="orderNumber"></td>
-            </tr>
-            <tr class="border-b">
-              <td class="py-2 font-medium">Status:</td>
-              <td class="py-2" id="status"></td>
-            </tr>
-            <tr class="border-b">
-              <td class="py-2 font-medium">Estimated Delivery:</td>
-              <td class="py-2" id="estimatedDelivery"></td>
-            </tr>
-            <tr>
-              <td class="py-2 font-medium">Current Location:</td>
-              <td class="py-2" id="currentLocation"></td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-
-      <section class="mb-8">
-        <h2 class="text-2xl font-semibold mb-4">Shipping Details</h2>
-        <table class="w-full border-collapse">
-          <tbody>
-            <tr class="border-b">
-              <td class="py-2 font-medium">Shipping Address:</td>
-              <td class="py-2" id="shippingAddress"></td>
-            </tr>
-            <tr class="border-b">
-              <td class="py-2 font-medium">Order Date:</td>
-              <td class="py-2" id="orderDate"></td>
-            </tr>
-            <tr>
-              <td class="py-2 font-medium">Shipping Method:</td>
-              <td class="py-2" id="shippingMethod"></td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-
-      <section class="mb-8">
-        <h2 class="text-2xl font-semibold mb-4">Order Timeline</h2>
-        <div class="overflow-x-auto">
-          <table class="w-full border-collapse">
-            <thead>
-              <tr class="bg-gray-100">
-                <th class="py-2 px-4 text-left">Status</th>
-                <th class="py-2 px-4 text-left">Date</th>
-                <th class="py-2 px-4 text-left">Time</th>
+        <h2 class="text-xl font-semibold text-gray-700 mb-4">Order Information</h2>
+        <div class="bg-gray-50 p-4 rounded-lg">
+          <table class="w-full text-gray-600">
+            <tbody>
+              <tr class="border-b">
+                <td class="py-3 font-medium">Order Number:</td>
+                <td class="py-3" id="orderNumber"></td>
               </tr>
-            </thead>
-            <tbody id="timeline">
+              <tr class="border-b">
+                <td class="py-3 font-medium">Status:</td>
+                <td class="py-3" id="status"></td>
+              </tr>
+              <tr class="border-b">
+                <td class="py-3 font-medium">Estimated Delivery:</td>
+                <td class="py-3" id="estimatedDelivery"></td>
+              </tr>
+              <tr>
+                <td class="py-3 font-medium">Shipping Address:</td>
+                <td class="py-3" id="shippingAddress"></td>
+              </tr>
+              <tr>
+                <td class="py-3 font-medium">Order Date:</td>
+                <td class="py-3" id="orderDate"></td>
+              </tr>
             </tbody>
           </table>
         </div>
       </section>
 
+      <!-- User Details -->
+      <section class="mb-8">
+        <h2 class="text-xl font-semibold text-gray-700 mb-4">User Details</h2>
+        <div class="bg-gray-50 p-4 rounded-lg">
+          <table class="w-full text-gray-600">
+            <tbody>
+              <tr class="border-b">
+                <td class="py-3 font-medium">User ID:</td>
+                <td class="py-3" id="userId"></td>
+              </tr>
+              <tr class="border-b">
+                <td class="py-3 font-medium">User Name:</td>
+                <td class="py-3" id="userName"></td>
+              </tr>
+              <tr class="border-b">
+                <td class="py-3 font-medium">Phone Number:</td>
+                <td class="py-3" id="phoneNumber"></td>
+              </tr>
+              <tr class="border-b">
+                <td class="py-3 font-medium">Payment Method:</td>
+                <td class="py-3" id="paymentMethod"></td>
+              </tr>
+              <tr>
+                <td class="py-3 font-medium">Total Amount:</td>
+                <td class="py-3" id="totalAmount"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Order Items -->
       <section>
-        <h2 class="text-2xl font-semibold mb-4">Order Items</h2>
-        <div class="overflow-x-auto">
-          <table class="w-full border-collapse">
+        <h2 class="text-xl font-semibold text-gray-700 mb-4">Order Items</h2>
+        <div class="bg-gray-50 p-4 rounded-lg overflow-x-auto">
+          <table class="w-full text-gray-600">
             <thead>
-              <tr class="bg-gray-100">
-                <th class="py-2 px-4 text-left">Item</th>
-                <th class="py-2 px-4 text-left">Quantity</th>
-                <th class="py-2 px-4 text-left">Price</th>
+              <tr class="bg-gray-200 text-gray-700">
+                <th class="py-3 px-4 text-left">Item</th>
+                <th class="py-3 px-4 text-left">Quantity</th>
+                <th class="py-3 px-4 text-left">Price</th>
               </tr>
             </thead>
-            <tbody id="items">
-            </tbody>
+            <tbody id="items"></tbody>
           </table>
         </div>
       </section>
     </div>
   </div>
+
   <script src="/static/JS/Orders/TrackOrders.js"></script>
 </body>
 </html>
