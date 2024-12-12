@@ -7,7 +7,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const userId =  window.localStorage.getItem('userId');
     const baseURL = "/shop/Collection/Categories/";
     const OrderLink = document.getElementById('OrderLink');
+    const cartBtn = document.getElementById('cartBtn');
     let productNameToId = {};
+
+    cartBtn.addEventListener('click', () => {
+        window.location.href = `/cart/${userId}`;
+    });
 
     OrderLink.addEventListener('click', () => {
         window.location.href = `/User/Orders/${userId}`;

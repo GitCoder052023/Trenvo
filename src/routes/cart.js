@@ -2,7 +2,8 @@ const express = require("express");
 const router = express.Router();
 const path = require("path");
 
-router.get("/", (req, res) => {
+router.get("/:userId", (req, res) => {
+    const userId = req.params.userId;
     res.sendFile("templates/cart/cart.html", { root: path.join(__dirname, "../") })
 })
 

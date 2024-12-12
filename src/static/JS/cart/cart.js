@@ -1,17 +1,31 @@
-// Sample cart data (in a real application, this would come from a backend or local storage)
-let cartItems = [
-    { id: 1, name: 'Classic White T-shirt', size: 'M', color: 'White', price: 599, quantity: 1, image: '/static/Assets/img/blog/Gemini_Generated_Image_cnod3vcnod3vcnod.jpeg' },
-    { id: 2, name: 'Denim Jeans', size: '32', color: 'Blue', price: 1299, quantity: 2, image: '/static/Assets/img/blog/Gemini_Generated_Image_1380nq1380nq1380.jpeg' }
-];
+const currentUrl = window.location.pathname;
+const userId = currentUrl.split('/')[2];
+
+let cartItems = [];
+
+async function fetchCartData() {
+    try {
+        const response = await fetch(`http://localhost:8000/cart/user/${userId}`);
+        const data = await response.json();
+        
+        cartItems = data.cart.products.map((product, index) => ({
+            id: index + 1,
+            name: product.name,
+            size: product.size,
+            price: Math.round(product.price),
+            quantity: product.quantity,
+            image: product.image
+        }));
+
+        updateCart();
+    } catch (error) {
+        console.error('Error fetching cart data:', error);
+    }
+}
 
 const cartItemsContainer = document.getElementById('cart-items');
 const orderSummaryContainer = document.getElementById('order-summary');
 const checkoutButton = document.getElementById('checkout-btn');
-
-function saveCartToLocalStorage() {
-    localStorage.setItem('cartItems', JSON.stringify(cartItems));
-}
-
 
 function updateCart() {
     cartItemsContainer.innerHTML = '';
@@ -23,7 +37,7 @@ function updateCart() {
                 <img src="${item.image}" alt="${item.name}" class="w-20 h-20 object-cover rounded-lg">
                 <div>
                     <h3 class="text-lg font-semibold mb-1 text-black">${item.name}</h3>
-                    <p class="text-gray-600">Size: ${item.size}, Color: ${item.color}</p>
+                    <p class="text-gray-600">Size: ${item.size}</p>
                     <p class="text-base font-bold text-black">₹${item.price}</p>
                 </div>
             </div>
@@ -49,23 +63,55 @@ function attachQuantityListeners() {
     });
 }
 
-function updateQuantity(itemId, change) {
+async function updateQuantity(itemId, change) {
     const item = cartItems.find(item => item.id == itemId);
     if (item) {
-        item.quantity += change;
-        if (item.quantity <= 0) {
-            cartItems = cartItems.filter(item => item.id != itemId);
+        const newQuantity = item.quantity + change;
+        const productIndex = itemId - 1;
+
+        if (newQuantity <= 0) {
+            try {
+                const deleteResponse = await fetch(`http://localhost:8000/cart/remove/${userId}/${productIndex}`, {
+                    method: 'DELETE'
+                });
+
+                if (deleteResponse.ok) {
+                    await fetchCartData();
+                }
+            } catch (error) {
+                console.error('Error removing product:', error);
+            }
+            return;
         }
-        updateCart();
+
+        try {
+            const response = await fetch(`http://localhost:8000/cart/update/${userId}/${productIndex}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    quantity: newQuantity,
+                    size: "XL"
+                })
+            });
+
+            if (response.ok) {
+                await fetchCartData();
+            }
+        } catch (error) {
+            console.error('Error updating quantity:', error);
+        }
     }
 }
+
 
 function updateOrderSummary() {
     let subtotal = 0;
     let itemsHtml = '';
 
     cartItems.forEach(item => {
-        const itemTotal = item.price * item.quantity;
+        const itemTotal = Math.round(item.price * item.quantity);
         subtotal += itemTotal;
         itemsHtml += `
             <div class="flex justify-between text-gray-600">
@@ -74,7 +120,7 @@ function updateOrderSummary() {
             </div>`;
     });
 
-    const discount = 200; // This could be calculated based on some logic
+    const discount = subtotal > 700 ? 200 : 0;
     const total = subtotal - discount;
 
     orderSummaryContainer.innerHTML = `
@@ -96,13 +142,10 @@ function updateOrderSummary() {
             </div>
         </div>
     `;
-
-    saveCartToLocalStorage();
 }
 
 checkoutButton.addEventListener('click', () => {
     window.location.href = '/cart/checkout';
 });
 
-// Initialize the cart
-updateCart();
+fetchCartData();

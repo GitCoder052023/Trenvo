@@ -3,6 +3,7 @@ const shop = document.getElementById("ShopBtn")
 const ProfileButton = document.getElementById("User-icon") 
 const wishlistButton = document.querySelector('.fas.fa-heart');
 const productCards = document.querySelectorAll('.product-card');
+const userId =  window.localStorage.getItem('userId');
 
 wishlistButton.addEventListener("click", () => {
     window.location.href = "/User/Profile/Wishlist";
@@ -10,7 +11,7 @@ wishlistButton.addEventListener("click", () => {
 
 
 cart.addEventListener("click", ()=>{
-    window.location.href = "/cart"
+    window.location.href = `/cart/${userId}`;
 })
 
 shop.addEventListener("click", ()=>{

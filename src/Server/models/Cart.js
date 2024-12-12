@@ -70,9 +70,19 @@ async function updateProductInCart(userId, productIndex, updateData) {
 
 async function removeProductFromCart(userId, productIndex) {
   const db = await connectToDatabase();
+  
+  const cart = await db.collection(COLLECTION_NAME).findOne({ userId });
+  if (!cart || !cart.products[productIndex]) return null;
+  
+  const productToRemove = cart.products[productIndex];
+
   return db.collection(COLLECTION_NAME).updateOne(
     { userId },
-    { $unset: { [`products.${productIndex}`]: 1 } }
+    { 
+      $pull: { 
+        products: productToRemove 
+      } 
+    }
   );
 }
 
