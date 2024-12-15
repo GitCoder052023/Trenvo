@@ -19,13 +19,14 @@
 
 - **Front-End:**
   - 🎨 **Landing Page:** A modern home page showcasing featured products and collections.
-  - 📄 **Static Pages:** Includes "About Us" and "Contact Us" sections.
+  - 📄 **Static Pages:** Includes "About Us" sections.
   - 🔐 **Login & Signup Pages:** Basic forms for user authentication.
-  - 🛒 **Shopping & Product Pages:** General shopping pages for browsing products.
-  - 🛍️ **Cart, Checkout, and Payment Pages:** Includes static interfaces for cart review and payment methods.
-  - 🧑‍💼 **Profile & Wishlist Pages:** User profile and wishlist functionalities with dynamic content.
-  - 🚚 **Order & Track Order Pages:** Dynamic order tracking pages with interactive features.
-  - 🔄 **Password Reset Flow:** A secure multi-step process with email and OTP verification.
+  - 🛒 **Shopping & Product Pages:** Fully dynamic shopping pages for browsing products.
+  - 🛍️ **Cart, Checkout, and Payment Pages:** Fully dynamic interfaces for cart review and payment methods.
+  - 🧑‍💼 **Profile & Wishlist Pages:** Profile page is dynamic, while the wishlist page remains static.
+  - 🚚 **Order & Track Order Pages:** Fully dynamic order tracking pages with interactive features.
+  - 📞 **Contact Us Page:** Fully dynamic and integrated with the backend.
+  - 🔄 **Password Reset Flow:** A secure, fully dynamic multi-step process integrated with the backend, including email and OTP verification.
 
 - **Back-End:**
   - 🌐 **Node.js & Express:** Serving static files and handling routing efficiently.
@@ -91,178 +92,52 @@ npm run dev
 ### Step 6: Access the Application
 Open your browser and go to `http://localhost:3000`.
 
-## 🏗️ System Architecture
+## 🌟 Testimonials
 
-```bash
-Trenvo
-|   .gitignore
-|   .env.example
-|   CODE_OF_CONDUCT.md
-|   CONTRIBUTING.md
-|   SECURITY.md
-|   package-lock.json
-|   package.json
-|   tailwind.config.js
-|   README.md
-│
-└───src
-    │   app.js
-    │
-    ├───routes
-    │       auth.js
-    │       cart.js
-    │       Collection.js
-    │       info.js
-    │       main.js
-    │       Orders.js
-    │       Payments.js
-    │       Product.js
-    │       shop.js
-    │       User.js
-    │
-    ├───Server
-    │   │   server.js
-    │   │
-    │   ├───config
-    │   │       db.js
-    │   │
-    │   ├───controllers
-    │   │       authController.js
-    │   │       ContactController.js
-    │   │       MediaManagerController.js
-    │   │       ProductController.js
-    │   │       profileController.js
-    │   │       ResetPasswordController.js
-    │   │
-    │   ├───models
-    │   │       product.js
-    │   │       User.js
-    │   │
-    │   ├───routes
-    │   │       authRoutes.js
-    │   │       ContactRoutes.js
-    │   │       index.js
-    │   │       MediaManagerRoutes.js
-    │   │       ProductRoutes.js
-    │   │       profileRoutes.js
-    │   │
-    │   └───utils
-    │           authUtils.js
-    │           CloudinaryHelper.js
-    │           passwordUtils.js
-    │           SendMail.js
-    │
-    ├───static
-    │   ├───Assets
-    │   │   ├───img
-    │   │   │
-    │   │   └───Videos
-    │   ├───CSS
-    │   │   │   404.CSS
-    │   │   │   LandingPage.css
-    │   │   │   main.css
-    │   │   │   output.css
-    │   │   │
-    │   │   └───Shop
-    │   │           Shop.css
-    │   │
-    │   ├───JS
-    │   │   │   LandingPage.js
-    │   │   │
-    │   │   ├───Auth
-    │   │   │       login.js
-    │   │   │       Reset-Password.js
-    │   │   │       signup.js
-    │   │   │       Submit-Email.js
-    │   │   │       SubmitOTP.js
-    │   │   │
-    │   │   ├───cart
-    │   │   │       cart.js
-    │   │   │       checkout.js
-    │   │   │
-    │   │   ├───Contact
-    │   │   │       Contact.js
-    │   │   │
-    │   │   ├───Orders
-    │   │   │       Orders.js
-    │   │   │       TrackOrders.js
-    │   │   │
-    │   │   ├───Payment
-    │   │   │       Payment.js
-    │   │   │
-    │   │   ├───Shop
-    │   │   │   │   Shop.js
-    │   │   │   │
-    │   │   │   └───Collection
-    │   │   │       │   Collection.js
-    │   │   │       │
-    │   │   │       ├───Categories
-    │   │   │       │       AccessoriesCollection.js
-    │   │   │       │       MenCollection.js
-    │   │   │       │       WearablesCollection.js
-    │   │   │       │       WomenCollection.js
-    │   │   │       │
-    │   │   │       └───Product
-    │   │   │               Product.js
-    │   │   │
-    │   │   └───User
-    │   │           Profile.js
-    │   │           Wishlist.js
-    │   │
-    │   ├───JSON
-    │   │       Collection_Products.json
-    │   │       Orders_Data.json
-    │   │       Tracking_Data.json
-    │   │       Wishlist_Products.json
-    │   │
-    │   └───Utilities
-    │           CategoriesCollection.js
-    │
-    └───templates
-        │   LandingPage.html
-        │
-        ├───Auth
-        │       login.html
-        │       Reset-Password.html
-        │       signup.html
-        │       Submit-Email.html
-        │       SubmitOTP.html
-        │
-        ├───cart
-        │       cart.html
-        │       checkout.html
-        │
-        ├───info
-        │       About.html
-        │       Contact.html
-        │       Request_Success.html
-        │
-        ├───Orders
-        │       Orders.html
-        │       TrackOrders.html
-        │
-        ├───Payments
-        │       Payment.html
-        │
-        ├───Shop
-        │   │   Shop.html
-        │   │
-        │   └───Collections
-        │       │   Collection.html
-        │       │
-        │       ├───Categories
-        │       │       AccessoriesCollection.html
-        │       │       MenCollection.html
-        │       │       WearablesCollection.html
-        │       │       WomenCollection.html
-        │       │
-        │       └───Product
-        │               Product.html
-        │
-        ├───User
-        │       Profile.html
-        │       Wishlist.html
-        │
-        └───Utility
-                404.html
-```
+We would like to extend our gratitude to the contributors who have significantly supported the development of **Trenvo**:
+
+- **IbrahimAhmad77977**: Played a pivotal role in making pages fully responsive, demonstrating exceptional skill and dedication. His work is highly commendable, and I rate him **5/5**.
+- **huzaifazahid1**: Skillfully re-created the frontend for several pages, perfectly translating designs into functional interfaces. His talent and attention to detail are outstanding, earning a **5/5** rating.
+- **royadeveloper01**: Made significant contributions to the backend architecture of Trenvo, showcasing proficiency and commitment.
+- **AbdullahAhmadAAK**: Contributed extensively to ensuring the responsiveness of pages, exhibiting excellent technical skills. I rate his work **5/5**.
+
+Your efforts and dedication are deeply appreciated! 🚀
+
+## 🤝 Contributing
+
+We welcome contributions from developers around the world! Follow these steps to get started:
+
+1. **Fork the Repository:**
+   - Click the "Fork" button on the top right of this repository to create your own copy.
+
+2. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/your-username/Trenvo.git
+   ```
+
+3. **Create a Branch:**
+   - Use a descriptive name for your branch that indicates the feature or bugfix you are working on:
+     ```bash
+     git checkout -b feature/your-feature-name
+     ```
+
+4. **Make Changes:**
+   - Write clean, well-documented code.
+   - Ensure that your code adheres to the project's coding guidelines.
+
+5. **Test Your Changes:**
+   - Before submitting your work, ensure that your changes are tested and do not break existing functionality.
+
+6. **Push to Your Fork:**
+   ```bash
+   git push origin feature/your-feature-name
+   ```
+
+7. **Create a Pull Request:**
+   - Go to the original repository on GitHub and create a Pull Request (PR).
+   - Provide a detailed description of your changes and the motivation behind them.
+
+8. **Collaborate:**
+   - Address feedback and collaborate with reviewers to refine your PR.
+
+By contributing to this project, you agree to abide by its [Code of Conduct](https://github.com/GitCoder052023/Trenvo/blob/main/CODE_OF_CONDUCT.md).
