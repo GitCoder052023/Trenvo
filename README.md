@@ -15,6 +15,16 @@
 
 > **Note:** This README is primarily for developers contributing to this project.
 
+# ⚠️ Project Archived 
+
+This repository, **Trenvo**, has been **archived** and is no longer actively maintained or supported.
+
+- The code and resources in this repository are provided **as-is**.
+- No further updates, bug fixes, or feature additions will be made.
+- For references or learning purposes only.
+
+Thank you for your interest in **Trenvo**!
+
 ## 🌟 Current Features
 
 - **Front-End:**
